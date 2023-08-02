@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L0 - Коляченко</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__nav-element">
+                <div class="menu-burger__container">
+                    <div class="menu-burger__lines-block">
+                        <div class="menu-burger__line"></div>
+                        <div class="menu-burger__line"></div>
+                        <div class="menu-burger__line"></div>
+                    </div>
+                </div>
+                <div class="company-name">ТОВАРЫ И ТОЧКА</div>
+            </div>
+            <div class="header__searchbar">
+                <input class="searchbar" placeholder="Я ищу...">
+            </div>
+            <div class="header__navbar">
+                <div class="header__navbar-container">
+                    <div class="profile__container header__navbar-item">
+                        <img class="profile__icon header__navbar-icon" src="icons/Profile.svg"/>
+                        <div class="profile__text">Профиль</div>
+                    </div>
+                    <div class="cart__container header__navbar-item">
+                        <img class="cart__icon header__navbar-icon" src="icons/Cart.svg"/>
+                        <div class="cart__amount-indicator">3</div>
+                        <div class="cart__text">Корзина</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+    <div class="main__container">
+        <h1 class="main__cart-name">Корзина</h1>
+        <div class="main__goods">
+            <div class="available-goods">
+                <div class="available-goods__folding-header folding-header">
+                    <label class="choose-all_checkbox-block" for="choose-all-checkbox">
+                        <input class="real-checkbox hidden" id="choose-all-checkbox" type="checkbox" checked>
+                        <div class="custom-checkbox"></div>
+                        <div class="choose-all__text">Выбрать всё</div>
+                    </label>
+                    <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
+                </div>
+                <div class="available-goods__items">
+                    <div class="available-item"></div>
+                    <div class="available-item"
+                         style="height: 176px">
+                    </div>
+                    <div class="available-item"
+                         style="height: 152px">
+                    </div>
+                </div>
+            </div>
+            <div class="unavailable-goods">
+                <div class="unavailable-goods__folding-header folding-header">
+                    <div class="unavailable-goods__text">Отсутствуют · 3 товара</div>
+                    <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
+                </div>
+                <div class="unavailable-goods__items">
+                    <div class="available-item"></div>
+                    <div class="available-item"></div>
+                    <div class="available-item"></div>
+                </div>
+            </div>
+            <div class="delivery-card order-info-card card"
+                 style="height: 362px;">
+            </div>
+            <div class="payment-card order-info-card card"></div>
+            <div class="receiver-card order-info-card card"
+                 style="height: 216px;">
+            </div>
+        </div>
+    </div>
+    <aside class="result-block card"></aside>
+</div>
+    <footer class="footer">
+        <div class="footer-text">© 2022  ООО «Товары и точка»</div>
+    </footer>
+</div>
+</body>
+</html>
