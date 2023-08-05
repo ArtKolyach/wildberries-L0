@@ -267,8 +267,75 @@
 
             </div>
 
-            <div class="delivery-card order-info-card card"
-                 style="height: 362px;">
+            <div class="delivery-card order-info-card card">
+                <div class="delivery-card__header">
+                     <div class="delivery-card__title">Способ доставки</div>
+                     <input class="info-card-button delivery-card__change-button" type="button" value="Изменить">
+                 </div>
+                <div class="delivery-card__main">
+                    <div class="delivery-card__delivery-point delivery-card__section">
+                        <div class="delivery-card__subtitle">Пункт выдачи</div>
+                        <div class="delivery-card__content">
+                            <div class="delivery-point__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+                            <div class="delivery-point__rating-hours-box">
+                                <div class="delivery-point__rating">
+                                    <img src="icons/Star.svg" class="delivery-point__rating-icon">
+                                    <div class="delivery-point__rating-number">4.99</div>
+                                </div>
+                                <div class="delivery-point__active-hours">Ежедневно с 10 до 21</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery-card__delivery-cost delivery-card__section">
+                        <div class="delivery-card__subtitle">Стоимость доставки</div>
+                        <div class="delivery-card__content">Бесплатно</div>
+                    </div>
+
+                    <div class="delivery-card__delivery-interval delivery-card__section">
+                        <div class="delivery-card__subtitle">5—6 февраля</div>
+                        <div class="delivery-card__content delivery-interval__items-container">
+                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-1.png');">
+                                <div class="delivery-card__item-amount-indicator notification-indicator" style="display: none;" >
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">5</div>
+                                </div>
+                            </div>
+
+                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-2.png');">
+                                <div class="delivery-card__item-amount-indicator notification-indicator">
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">184</div>
+                                </div>
+                            </div>
+
+                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-3.png');">
+                                <div class="delivery-card__item-amount-indicator notification-indicator">
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery-card__delivery-interval delivery-card__section">
+                        <div class="delivery-card__subtitle">7—8 февраля</div>
+                        <div class="delivery-card__content delivery-interval__items-container">
+                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-2.png');">
+                                <div class="delivery-card__item-amount-indicator notification-indicator">
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">16</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="delivery-card__return-delivery">
+                <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                <div class="return-delivery__text-block">
+                    <div class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</div>
+                    <a class="return-delivery__link" href="">бесплатно</a>
+                </div>
+            </div>
             </div>
 
             <div class="payment-card order-info-card card"></div>
