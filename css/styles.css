@@ -5,6 +5,7 @@
 body {
     background: #6725A8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 .header {
@@ -192,7 +193,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: left;
     margin-left: 10px;
 }
@@ -207,12 +208,14 @@ body {
 }
 
 .result-block {
+    position: sticky;
+    top: 10px;
     min-width: 429px;
     height: 572px;
     padding: 16px 24px 24px 24px;
     box-sizing: border-box;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15),
-    0px 0px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .available-item {
@@ -232,7 +235,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: left;
 
 }
@@ -240,6 +243,7 @@ body {
 .order-info-card {
     min-height: 136px;
     width: auto;
+    padding: 16px 24px 24px 24px;
 }
 
 .order-info-card:not(.order-info-card:last-of-type) {
@@ -258,7 +262,7 @@ body {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -395,7 +399,7 @@ input[type="number"]:focus {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: left;
     color: #FF3B30;
 }
@@ -439,7 +443,7 @@ input[type="number"]:focus {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: right;
 }
 
@@ -469,5 +473,137 @@ input[type="number"]:focus {
 
 .unavailable-item__description {
     width: 309px;
+}
+
+.delivery-card__header {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.delivery-card__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.delivery-card__section {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.delivery-card__section:last-of-type {
+    margin-bottom: 0;
+}
+
+.info-card-button {
+    border: none;
+    color: #CB11AB;
+    background: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: right;
+    margin-left: auto;
+    padding: 6px 0 0 0;
+}
+
+.delivery-card__section,
+.delivery-point__rating-hours-box,
+.delivery-point__rating {
+    display: flex;
+}
+
+.delivery-card__subtitle {
+    width: 153px;
+}
+
+.delivery-card__content {
+    margin-left: 32px;
+    font-weight: 400;
+}
+
+.delivery-point__rating-hours-box {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+.delivery-point__rating-number {
+    margin-left: 4px;
+}
+
+.delivery-point__active-hours {
+    margin-left: 8px;
+}
+
+.delivery-interval__items-container {
+    display: flex;
+}
+
+.delivery-card__item {
+    background-size: 40px 56px;
+    width: 40px;
+    height: 56px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+
+.notification-indicator-base {
+    position: relative;
+}
+
+.notification-indicator {
+    position: absolute;
+    top: -9px;
+    right: -4px;
+    background-color: #F55123;
+    border-radius: 16px;
+    height: 16px;
+    min-width: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-indicator-value {
+    margin: 0 5px 0 5px;
+}
+
+
+.delivery-card__item-photo {
+    width: 40px;
+    height: 56px;
+}
+
+.delivery-card__return-delivery, .return-delivery__text-block {
+    display: flex;
+}
+
+.delivery-card__return-delivery {
+    margin-top: 24px;
+}
+
+.return-delivery__text-block {
+    flex-wrap: wrap;
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    align-items: center;
+}
+
+.return-delivery__link {
+    color: #0CB477;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 
