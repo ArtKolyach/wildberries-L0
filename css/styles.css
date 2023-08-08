@@ -241,7 +241,6 @@ body {
 }
 
 .order-info-card {
-    min-height: 136px;
     width: auto;
     padding: 16px 24px 24px 24px;
 }
@@ -475,12 +474,12 @@ input[type="number"]:focus {
     width: 309px;
 }
 
-.delivery-card__header {
+.info-card-header {
     display: flex;
     margin-bottom: 16px;
 }
 
-.delivery-card__title {
+.info-card__title {
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
@@ -605,5 +604,56 @@ input[type="number"]:focus {
     color: #0CB477;
     text-decoration: none;
     border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+}
+
+.payment-card__paycard-info {
+    display: flex;
+    justify-content:start;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.paycard-info__paycard-number {
+    margin-left: 8px;
+}
+
+.paycard-info__paycard-date {
+    margin-left: 12px;
+}
+
+.payment-card__pay-on-receiving-info {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #9797AF;
+    margin-top: 8px;
+}
+
+.input-form-block {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.input-form-receiver {
+    border: none;
+    outline: none;
+}
+
+.label-input-form {
+    position: absolute;
+    left: 0;
+}
+
+.receiver-card__section {
+    display: flex;
+}
+
+.input-form-container {
+    width: 100%;
+}
+
+.input-form-container:not(:first-child) {
+    margin-left: 24px;
 }
 

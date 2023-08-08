@@ -268,10 +268,11 @@
             </div>
 
             <div class="delivery-card order-info-card card">
-                <div class="delivery-card__header">
-                     <div class="delivery-card__title">Способ доставки</div>
+                <div class="info-card-header">
+                     <div class="info-card__title">Способ доставки</div>
                      <input class="info-card-button delivery-card__change-button" type="button" value="Изменить">
                  </div>
+
                 <div class="delivery-card__main">
                     <div class="delivery-card__delivery-point delivery-card__section">
                         <div class="delivery-card__subtitle">Пункт выдачи</div>
@@ -338,10 +339,74 @@
             </div>
             </div>
 
-            <div class="payment-card order-info-card card"></div>
+            <div class="payment-card order-info-card card">
+                <div class="info-card-header">
+                    <div class="info-card__title">Способ оплаты</div>
+                    <input class="info-card-button" type="button" value="Изменить">
+                </div>
 
-            <div class="receiver-card order-info-card card"
-                 style="height: 216px;">
+                <div class="payment-card__main">
+                    <div class="payment-card__paycard-info">
+                        <img class="paycard-info__icon" src="icons/Paycard-mir.svg">
+                        <div class="paycard-info__paycard-number">1234 56•• •••• 1234</div>
+                        <div class="paycard-info__paycard-date">01/30</div>
+                    </div>
+                    <div class="payment-card__pay-on-receiving-info">
+                        Спишем оплату с карты при получении
+                    </div>
+                </div>
+            </div>
+
+            <div class="receiver-card order-info-card card">
+                 <div class="info-card-header">
+                     <div class="info-card__title">Получатель</div>
+                 </div>
+
+                <div class="receiver-card__main">
+                    <div class="receiver-card__name-surname-block receiver-card__section">
+                        <div class="input-form-container">
+                            <div class="input-form-block">
+                                <input type="text" class="input-form-receiver" id="name-input-form">
+                                <label for="name-input-form" class="label-input-form">Имя</label>
+                            </div>
+                            <div class="input-form-error hidden" data-empty="Укажите имя">Ошибка</div>
+                        </div>
+
+                        <div class="input-form-container">
+                            <div class="input-form-block">
+                                <input type="text" class="input-form-receiver" id="surname-input-form">
+                                <label for="surname-input-form" class="label-input-form">Фамилия</label>
+                            </div>
+                            <div class="input-form-error hidden" data-empty="Укажите фамилию">Ошибка</div>
+                        </div>
+                    </div>
+
+                    <div class="receiver-card__mail-phone-inn-block receiver-card__section">
+                        <div class="input-form-container">
+                            <div class="input-form-block">
+                                <input type="text" class="input-form-receiver" id="email-input-form">
+                                <label for="email-input-form" class="label-input-form">Почта</label>
+                            </div>
+                            <div class="input-form-error hidden" data-empty="Укажите номер телефона">Ошибка</div>
+                        </div>
+
+                        <div class="input-form-container">
+                            <div class="input-form-block">
+                                <input type="text" class="input-form-receiver" id="phone-input-form">
+                                <label for="phone-input-form" class="label-input-form">Телефон</label>
+                            </div>
+                            <div class="input-form-error hidden" data-empty="Укажите почту">Ошибка</div>
+                        </div>
+
+                        <div class="input-form-container">
+                                <div class="input-form-block">
+                                    <input type="text" class="input-form-receiver" id="inn-input-form">
+                                    <label for="inn-input-form" class="label-input-form">ИНН</label>
+                                </div>
+                                <div class="input-form-error hidden" data-empty="Укажите ИНН">Ошибка</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
