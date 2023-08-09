@@ -70,7 +70,9 @@
                             <div class="item-warehouse item-footer">Коледино WB</div>
                             <div class="item-provider item-footer">
                                 ООО Вайлдберриз
-                                <img class="item-provider__info-icon" src="icons/Info.svg">
+                                <div class="item-provider__info-icon-wrapper">
+                                    <img class="item-provider__info-icon" src="icons/Info.svg">
+                                </div>
                             </div>
                         </div>
                         <div class="available-item__amount-info">
@@ -116,7 +118,9 @@
                             <div class="item-warehouse item-footer">Коледино WB</div>
                             <div class="item-provider item-footer">
                                 ООО Мегапрофстиль
-                                <img class="item-provider__info-icon" src="icons/Info.svg">
+                                <div class="item-provider__info-icon-wrapper">
+                                    <img class="item-provider__info-icon" src="icons/Info.svg">
+                                </div>
                             </div>
                         </div>
                         <div class="available-item__amount-info">
@@ -162,7 +166,9 @@
                             <div class="item-warehouse item-footer">Коледино WB</div>
                             <div class="item-provider item-footer">
                                 ООО Вайлдберриз
-                                <img class="item-provider__info-icon" src="icons/Info.svg">
+                                <div class="item-provider__info-icon-wrapper">
+                                    <img class="item-provider__info-icon" src="icons/Info.svg">
+                                </div>
                             </div>
                         </div>
                         <div class="available-item__amount-info">
@@ -331,12 +337,12 @@
                 </div>
 
                 <div class="delivery-card__return-delivery">
-                <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                <div class="return-delivery__text-block">
-                    <div class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</div>
-                    <a class="return-delivery__link" href="">бесплатно</a>
+                    <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                    <div class="return-delivery__text-block">
+                        <div class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</div>
+                        <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <div class="payment-card order-info-card card">
@@ -365,52 +371,188 @@
                 <div class="receiver-card__main">
                     <div class="receiver-card__name-surname-block receiver-card__section">
                         <div class="input-form-container">
+                            <div class="input-form-upper-label"></div>
+
                             <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="name-input-form">
+                                <input type="text" class="input-form-receiver" id="name-input-form" placeholder="&nbsp;">
                                 <label for="name-input-form" class="label-input-form">Имя</label>
                             </div>
-                            <div class="input-form-error hidden" data-empty="Укажите имя">Ошибка</div>
+
+                            <div class="input-form-error" data-empty="Укажите имя"></div>
                         </div>
 
                         <div class="input-form-container">
+                            <div class="input-form-upper-label"></div>
+
                             <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="surname-input-form">
+                                <input type="text" class="input-form-receiver" id="surname-input-form" placeholder="&nbsp;">
                                 <label for="surname-input-form" class="label-input-form">Фамилия</label>
                             </div>
-                            <div class="input-form-error hidden" data-empty="Укажите фамилию">Ошибка</div>
+
+                            <div class="input-form-error" data-empty="Укажите фамилию"></div>
                         </div>
                     </div>
 
                     <div class="receiver-card__mail-phone-inn-block receiver-card__section">
                         <div class="input-form-container">
+                            <div class="input-form-upper-label"></div>
+
                             <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="email-input-form">
+                                <input type="text" class="input-form-receiver" id="email-input-form" placeholder="&nbsp;">
                                 <label for="email-input-form" class="label-input-form">Почта</label>
                             </div>
-                            <div class="input-form-error hidden" data-empty="Укажите номер телефона">Ошибка</div>
+
+                            <div class="input-form-error" data-empty="Укажите номер телефона"></div>
                         </div>
 
                         <div class="input-form-container">
+                            <div class="input-form-upper-label"></div>
+
                             <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="phone-input-form">
+                                <input type="text" class="input-form-receiver" id="phone-input-form" placeholder="&nbsp;">
                                 <label for="phone-input-form" class="label-input-form">Телефон</label>
                             </div>
-                            <div class="input-form-error hidden" data-empty="Укажите почту">Ошибка</div>
+
+                            <div class="input-form-error" data-empty="Укажите почту"></div>
                         </div>
 
                         <div class="input-form-container">
-                                <div class="input-form-block">
-                                    <input type="text" class="input-form-receiver" id="inn-input-form">
+                            <div class="input-form-upper-label"></div>
+
+                            <div class="input-form-block">
+                                    <input type="text" class="input-form-receiver" id="inn-input-form" placeholder="&nbsp;">
                                     <label for="inn-input-form" class="label-input-form">ИНН</label>
-                                </div>
-                                <div class="input-form-error hidden" data-empty="Укажите ИНН">Ошибка</div>
+                            </div>
+
+                            <div class="input-form-error" data-empty="Укажите ИНН">Для таможенного оформления</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <aside class="result-block card"></aside>
+    <aside class="result-block card">
+        <div class="info-card-header result-block__header">
+            <div class="info-card__title result-block__title">
+                <div class="result-block__title-text">Итого</div>
+
+                <div class="result-block__title-sum">
+                    <div class="title-sum__value">2 101 063</div>
+                    <div class="title-sum__currency">&nbsp;сом</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="result-block__main">
+            <div class="result-block__cost-calculations result-block-section">
+                <div class="cost-calculations__total-amount-and-sum cost-calculations-section">
+
+                    <div class="total-amount-and-sum__amount cost-calculations__section-part">
+                        <div class="total-amount-and-sum__amount-number">203</div>
+
+                        <div class="total-amount-and-sum__amount-text">&nbsp;товара</div>
+                    </div>
+
+
+                    <div class="total-amount-and-sum__sum cost-calculations__section-part">
+                        <div class="total-amount-and-sum__sum-value">2 302 048</div>
+
+                        <div class="total-amount-and-sum__sum-currency">&nbsp;сом</div>
+                    </div>
+
+                </div>
+
+                <div class="cost-calculations__total-discount cost-calculations-section">
+
+                    <div class="total-discount__title cost-calculations__section-part">Скидка</div>
+
+                    <div class="total-discount__sum cost-calculations__section-part">
+                        <div class="total-discount__sum-value">−200 985</div>
+
+                        <div class="total-discount__sum-currency">&nbsp;сом</div>
+                    </div>
+
+                </div>
+
+                <div class="cost-calculations__total-delivery-cost cost-calculations-section">
+                    <div class="total-delivery-cost cost-calculations__section-part">
+                        Доставка
+                    </div>
+
+                    <div class="total-delivery-cost cost-calculations__section-part">
+                        Бесплатно
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-block__delivery-info result-block-section">
+                <div class="delivery-info__header">
+                    <div class="delivery-info__title delivery-info-section">Доставка в пункт выдачи</div>
+
+                    <div class="delivery-info__change-button result-block__change-button">
+                        <img class="result-block__change-icon" src="icons/Pencil.svg">
+                    </div>
+                </div>
+
+                <div class="delivery-info__address delivery-info-section">
+                    Бишкек, улица Ахматбека Суюмбаева, 12/1
+                </div>
+
+                <span class="delivery-info__date delivery-info-section fake-link">5–8 фев</span>
+
+                <div class="delivery-info__return-delivery-block">
+                    <div class="delivery-card__return-delivery result-card__return-delivery">
+                        <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                        <div class="return-delivery__text-block">
+                            <div class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</div>
+                            <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-block__payment-info result-block-section">
+                <div class="payment-info__header delivery-info__header">
+                    <div class="delivery-info__title delivery-info-section">Оплата картой</div>
+
+                    <div class="delivery-info__change-button result-block__change-button">
+                        <img class="result-block__change-icon" src="icons/Pencil.svg">
+                    </div>
+                </div>
+
+                <div class="payment-info__main">
+                    <img class="payment-info__card-icon" src="icons/Paycard-mir.svg">
+                    <div class="payment-info__card-number">1234 12•• •••• 1234</div>
+                </div>
+
+                <div class="payment-info__pay-now-block">
+                    <div class="pay-now-block__check-to-pay-block">
+                        <label class="check-to-pay-block__check choose-item_checkbox-block" for="choose-pay-now-checkbox">
+                            <input class="real-checkbox hidden" id="choose-pay-now-checkbox" type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </label>
+
+                        <div class="check-to-pay-block__text">Списать оплату сразу</div>
+                    </div>
+
+                    <div class="pay-now-block__description">
+                        Спишем оплату с карты при получении
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-block__order-button-block">
+                <input type="button" class="order-button" value="Заказать">
+            </div>
+
+            <div class="result-block__accept_terms-of-use-block">
+                <input type="checkbox" class="terms-of-use-checkbox" checked>
+
+
+            </div>
+        </div>
+    </aside>
 </div>
     <footer class="footer">
         <div class="footer-text">© 2022  ООО «Товары и точка»</div>
