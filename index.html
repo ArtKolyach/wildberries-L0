@@ -10,7 +10,7 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <div class="header__container">
+
             <div class="header__nav-element">
                 <div class="menu-burger__container">
                     <div class="menu-burger__lines-block">
@@ -27,18 +27,25 @@
             <div class="header__navbar">
                 <div class="header__navbar-container">
                     <div class="profile__container header__navbar-item">
-                        <img class="profile__icon header__navbar-icon" src="icons/Profile.svg"/>
+                        <div>
+                            <img class="profile__icon header__navbar-icon" src="icons/Profile.svg"/>
+                        </div>
+
                         <div class="profile__text">Профиль</div>
                     </div>
                     <div class="cart__container header__navbar-item">
-                        <img class="cart__icon header__navbar-icon" src="icons/Cart.svg"/>
+                        <div>
+                            <img class="cart__icon header__navbar-icon" src="icons/Cart.svg"/>
+                        </div>
+
                         <div class="cart__amount-indicator">3</div>
                         <div class="cart__text">Корзина</div>
                     </div>
                 </div>
             </div>
-        </div>
+
     </header>
+
     <div class="main">
     <div class="main__container">
         <h1 class="main__cart-name">Корзина</h1>
@@ -547,13 +554,19 @@
             </div>
 
             <div class="result-block__accept_terms-of-use-block">
-                <input type="checkbox" class="terms-of-use-checkbox" checked>
+                <img class="terms-of-use__check-icon" src="icons/Terms-of-use-check.svg">
 
-
+                <div class="terms-of-use__text">
+                    <span class="terms-of-use__text-first-word">Соглашаюсь</span>
+                    <span class="terms-of-use__text-link">с правилами пользования торговой площадкой</span>
+                    <span class="terms-of-use__text-and">и</span>
+                    <span class="terms-of-use__text-link">возврата</span>
+                </div>
             </div>
         </div>
     </aside>
 </div>
+
     <footer class="footer">
         <div class="footer-text">© 2022  ООО «Товары и точка»</div>
     </footer>

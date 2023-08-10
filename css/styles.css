@@ -12,13 +12,16 @@ body {
     background: #6725A8;
     height: 88px;
     color: #FFFFFF;
+    padding: 20px 24px;
+    box-sizing: border-box;
+    display: flex;
 }
 
-.header__container {
+/*.header__container {
     padding: 20px 24px;
     display: flex;
     align-content: center;
-}
+}*/
 
 .header__nav-element {
     display: flex;
@@ -31,6 +34,7 @@ body {
     border-radius: 8px;
     box-sizing: border-box;
     padding: 12px 10px;
+    position: relative;
 }
 
 .menu-burger__lines-block {
@@ -39,6 +43,9 @@ body {
     justify-content: space-between;
     width: 28px;
     height: 24px;
+    position: absolute;
+    left: 9px;
+    bottom: 11px;
 }
 
 .menu-burger__line {
@@ -61,6 +68,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .searchbar {
@@ -83,9 +91,10 @@ body {
 
 .header__searchbar::after {
     content: url("../icons/Search.svg");
-    position: relative;
-    right: 73px;
+    position: absolute;
     width: 0;
+    right: 77px;
+    bottom: 10px;
 }
 
 .header__navbar-container {
@@ -95,7 +104,7 @@ body {
 .header__navbar-item {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     font-size: 13px;
     line-height: 16px;
 }
@@ -173,6 +182,7 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .real-checkbox:checked + .custom-checkbox {
@@ -210,6 +220,7 @@ body {
 }
 
 .result-block {
+    margin-top: -2px;
     position: sticky;
     top: 10px;
     max-width: 429px;
@@ -749,6 +760,16 @@ input[type="number"]:focus {
     display: flex;
 }
 
+.result-block__change-button {
+    position: relative;
+}
+
+.result-block__change-icon {
+    position: absolute;
+    right: 2px;
+    top: 3px;
+}
+
 .delivery-info-section {
     margin-bottom: 4px;
 }
@@ -837,11 +858,32 @@ input[type="number"]:focus {
     border: none;
 }
 
-.terms-of-use-checkbox:checked {
-    outline: none;
-    background-color: #FFFFFF;
+.result-block__accept_terms-of-use-block {
+    display: flex;
+    align-items: start;
 }
 
+
+.terms-of-use__check-icon {
+    padding-top: 2px;
+}
+
+.terms-of-use__text {
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.terms-of-use__text-link {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.terms-of-use__text-link:hover {
+    color: #CB11AB;
+    border-color: rgba(203, 17, 171, 0.2);
+}
 
 
 
