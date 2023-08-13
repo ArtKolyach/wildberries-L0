@@ -613,7 +613,7 @@ input[type="number"]:focus {
     height: 56px;
 }
 
-.delivery-card__return-delivery, .return-delivery__text-block {
+.delivery-card__return-delivery {
     display: flex;
 }
 
@@ -777,6 +777,10 @@ input[type="number"]:focus {
     top: 3px;
 }
 
+.result-block__delivery-info, .result-block__payment-info {
+    margin-bottom: 12px;
+}
+
 .delivery-info-section {
     margin-bottom: 4px;
 }
@@ -892,6 +896,14 @@ input[type="number"]:focus {
     border-color: rgba(203, 17, 171, 0.2);
 }
 
+.item-params__size_mobile {
+    display: none;
+}
+
+.mobile-tabbar {
+    display: none;
+}
+
 
 @media only screen and (min-width: 1024px) {
     .result-block {
@@ -915,13 +927,14 @@ input[type="number"]:focus {
 
 @media only screen and (max-width: 1023px) {
     .main {
-        padding: 15px 0 50px 0;
+        padding: 15px 0 40px 0;
         display: block;
     }
 
     .main__container {
         min-width: 300px;
         padding: 0;
+        margin-bottom: 16px;
     }
 
     .header__navbar, .searchbar {
@@ -998,6 +1011,14 @@ input[type="number"]:focus {
         padding: 0 16px;
     }
 
+    .available-goods {
+        margin-bottom: 46px;
+    }
+
+    .unavailable-goods {
+        margin-bottom: 32px;
+    }
+
     .available-item__check-and-photo {
         position: relative;
     }
@@ -1013,6 +1034,12 @@ input[type="number"]:focus {
         display: grid;
         grid-template-columns: auto 1fr;
         grid-template-rows: repeat(5, auto);
+    }
+
+    .available-item:not(.available-item:last-of-type) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 17px;
+        margin-bottom: 0;
     }
 
     .available-item__check-and-photo {
@@ -1077,10 +1104,223 @@ input[type="number"]:focus {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        align-items: center;
     }
 
     .item-provider {
         display: none;
+    }
+
+    .amount-info__counter {
+        width: 80px;
+        height: 32px;
+        padding: 0 8px;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+    }
+
+    .counter__value {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0;
+        max-width: 23px;
+    }
+
+    .counter__plus, .counter__minus {
+        padding-bottom: 6px;
+    }
+
+    .amount-info__items-left, .amount-info__action-buttons {
+        margin-top: 0;
+    }
+
+    .amount-info__items-left {
+        margin-right: 12px;
+    }
+
+    .amount-info__favourite-button {
+        margin-right: 24px;
+    }
+
+    .amount-info__delete-button {
+        margin-right: 12px;
+    }
+
+    .item-params__size_mobile {
+        display: block;
+        height: 22px;
+        min-width: 22px;
+        max-width: 72px;
+        text-align: center;
+        vertical-align: center;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 2px 3px 0 3px;
+        box-sizing: border-box;
+        color: black;
+    }
+
+    .unavailable-goods .available-item:not(.available-item:last-of-type) {
+        padding-bottom: 21px;
+    }
+
+    .unavailable-item__description {
+        grid-row-start: 1;
+    }
+
+    .unavailable-item .amount-info__action-buttons {
+        margin-left: auto;
+    }
+
+    .unavailable-item .amount-info__delete-button {
+        margin-right: 4px;
+    }
+
+    .unavailable-goods .folding-header {
+        padding-bottom: 18px;
+    }
+
+    .unavailable-item .amount-info {
+        margin-top: 16px;
+        padding-bottom: 3px;
+    }
+
+    .delivery-card__section {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 16px 16px 24px 16px;
+    }
+
+    .delivery-card__content {
+        margin-left: 0;
+    }
+
+    .info-card-header {
+        margin-bottom: 8px;
+    }
+
+    .delivery-interval__items-container {
+        margin-top: 12px;
+    }
+
+    .delivery-card__delivery-interval {
+        margin-bottom: 24px;
+    }
+
+    .delivery-card__return-delivery-block {
+        margin: 0 8px;
+    }
+
+    .order-info-card:not(.order-info-card:last-of-type) {
+        margin-bottom: 12px;
+    }
+
+
+    .receiver-card__section {
+        flex-direction: column;
+    }
+
+    .input-form-container:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .input-form-block {
+        height: 19px;
+        margin-top: 4px;
+    }
+
+    .input-form-error {
+        margin-top: 2px;
+    }
+
+    .input-form-container {
+        margin-bottom: 16px;
+    }
+
+    .receiver-card__mail-phone-inn-block .input-form-container:last-child {
+        margin-bottom: 0
+    }
+
+    .info-card-button {
+        padding: 5px 0 0 0;
+    }
+
+    .label-input-form {
+        bottom: 2px;
+    }
+
+    .input-form-receiver:focus + .label-input-form,
+    .input-form-receiver:not(:placeholder-shown) + .label-input-form{
+        top: -24px;
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+    .result-block {
+        background-color: #F6F6FA;
+        box-shadow: none;
+        padding: 8px 16px 0 16px;
+        min-height: 378px;
+    }
+
+    .result-block__cost-calculations {
+        margin-bottom: 16px;
+    }
+
+    #check-to-pay-now {
+        position: initial;
+    }
+
+    .result-block__delivery-info {
+        display: none;
+    }
+
+    .delivery-info__return-delivery-block {
+        background: #F0ECF4;
+        margin-top: 0;
+    }
+
+    .result-block__payment-info {
+        display: none;
+    }
+
+    .payment-info__pay-now-block {
+        background: #F0ECF4;
+        margin: 16px 0 24px 0;
+    }
+
+    .mobile-tabbar {
+        height: 56px;
+        display: flex;
+        background: #FFFFFF;
+        padding: 14px 13px;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .mobile-icon {
+        height: 28px;
+        width: 28px;
+    }
+
+    .mobile-tabbar_cart {
+        position: relative;
+    }
+
+    .cart__amount-indicator {
+        right: -6px;
+        top: -3px;
+        color: #FFFFFF;
+        line-height: 16px;
     }
 }
 

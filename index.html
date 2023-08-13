@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>L0 - Коляченко</title>
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css">
@@ -69,7 +71,9 @@
                                 <div class="custom-checkbox"></div>
                             </label>
                             <img class="item-photo" src="img/photo-1.png">
+                            <div class="item-params__size_mobile">56</div>
                         </div>
+
                         <div class="available-item__description">
                             <div class="item-name">Футболка UZcotton мужская</div>
                             <div class="item-params">
@@ -217,6 +221,7 @@
                     <div class="unavailable-item available-item">
                         <div class="available-item__check-and-photo unavailable-item__photo">
                             <img class="item-photo" src="img/photo-1.png">
+                            <div class="item-params__size_mobile">56</div>
                         </div>
                         <div class="unavailable-item__description available-item__description">
                             <div class="item-name">Футболка UZcotton мужская</div>
@@ -259,6 +264,7 @@
                     <div class="unavailable-item available-item">
                         <div class="available-item__check-and-photo unavailable-item__photo">
                             <img class="item-photo" src="img/photo-3.png">
+                            <div class="item-params__size_mobile">56/54/52...</div>
                         </div>
                         <div class="unavailable-item__description available-item__description">
                             <div class="item-name">
@@ -341,17 +347,20 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
-                <div class="delivery-card__return-delivery">
-                    <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                    <div class="return-delivery__text-block">
-                        <span class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
-                        <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                <div class="delivery-card__return-delivery-block">
+
+                    <div class="delivery-card__return-delivery">
+                        <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                        <div class="return-delivery__text-block">
+                            <span class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
+                            <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                        </div>
                     </div>
+
                 </div>
+
             </div>
 
             <div class="payment-card order-info-card card">
@@ -510,13 +519,14 @@
 
                 <span class="delivery-info__date delivery-info-section fake-link">5–8 фев</span>
 
-                <div class="delivery-info__return-delivery-block">
-                    <div class="delivery-card__return-delivery result-card__return-delivery">
-                        <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                        <div class="result-block__return-delivery-text-block return-delivery__text-block">
-                            <span class=" return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
-                            <a class="return-delivery__link fake-link" href="">бесплатно</a>
-                        </div>
+            </div>
+
+            <div class="delivery-info__return-delivery-block result-block-section">
+                <div class="delivery-card__return-delivery result-card__return-delivery">
+                    <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                    <div class="result-block__return-delivery-text-block return-delivery__text-block">
+                        <span class=" return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
+                        <a class="return-delivery__link fake-link" href="">бесплатно</a>
                     </div>
                 </div>
             </div>
@@ -535,19 +545,21 @@
                     <div class="payment-info__card-number">1234 12•• •••• 1234</div>
                 </div>
 
-                <div class="payment-info__pay-now-block">
-                    <div class="pay-now-block__check-to-pay-block">
-                        <label class="check-to-pay-block__check choose-item_checkbox-block" for="choose-pay-now-checkbox">
-                            <input class="real-checkbox hidden" id="choose-pay-now-checkbox" type="checkbox">
-                            <div class="custom-checkbox"></div>
-                        </label>
 
-                        <div class="check-to-pay-block__text">Списать оплату сразу</div>
-                    </div>
+            </div>
 
-                    <div class="pay-now-block__description">
-                        Спишем оплату с карты при получении
-                    </div>
+            <div class="payment-info__pay-now-block">
+                <div class="pay-now-block__check-to-pay-block">
+                    <label class="check-to-pay-block__check choose-item_checkbox-block" id="check-to-pay-now" for="choose-pay-now-checkbox">
+                        <input class="real-checkbox hidden" id="choose-pay-now-checkbox" type="checkbox">
+                        <div class="custom-checkbox"></div>
+                    </label>
+
+                    <div class="check-to-pay-block__text">Списать оплату сразу</div>
+                </div>
+
+                <div class="pay-now-block__description result-block-section">
+                    Спишем оплату с карты при получении
                 </div>
             </div>
 
@@ -572,6 +584,35 @@
     <footer class="footer">
         <div class="footer-text">© 2022  ООО «Товары и точка»</div>
     </footer>
+
+    <div class="mobile-tabbar">
+        <div class="mobile-tabbar__home">
+            <img class="mobile-icon mobile-tabbar_home-icon" src="icons/mobile/Home-mobile.svg">
+        </div>
+
+        <div class="mobile-tabbar_catalog">
+            <img class="mobile-icon mobile-tabbar_catalog-icon" src="icons/mobile/Catalog-mobile2.svg">
+        </div>
+
+        <div class="mobile-tabbar_cart">
+            <div>
+                <img class="mobile-icon mobile-tabbar_cart-icon" src="icons/mobile/Cart-mobile.svg"/>
+            </div>
+
+            <div class="cart__amount-indicator">3</div>
+        </div>
+
+        <div class="mobile-tabbar_favorites">
+            <img class="mobile-icon mobile-tabbar_favorites-icon" src="icons/mobile/Favorites-mobile.svg">
+        </div>
+
+        <div class="mobile-tabbar_profile">
+            <img class="mobile-icon mobile-tabbar_profile-icon" src="icons/mobile/Profile-mobile.svg">
+        </div>
+    </div>
+
 </div>
+
+
 </body>
 </html>
