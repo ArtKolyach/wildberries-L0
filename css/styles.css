@@ -851,6 +851,17 @@ input[type="number"]:focus {
     height: auto;
 }
 
+#check-to-pay__custom-checkbox {
+    position: initial;
+    background: #F6F6FA;
+    border-width: 1px;
+}
+
+#check-to-pay__real-checkbox:checked + #check-to-pay__custom-checkbox {
+    background-color: #CB11AB;
+    border: none;
+}
+
 .check-to-pay-block__text {
     margin-left: 8px;
 }
@@ -1271,13 +1282,10 @@ input[type="number"]:focus {
         min-height: 378px;
     }
 
-    .result-block__cost-calculations {
+    .result-block-section {
         margin-bottom: 16px;
     }
 
-    #check-to-pay-now {
-        position: initial;
-    }
 
     .result-block__delivery-info {
         display: none;
@@ -1294,7 +1302,7 @@ input[type="number"]:focus {
 
     .payment-info__pay-now-block {
         background: #F0ECF4;
-        margin: 16px 0 24px 0;
+        margin: 0 0 24px 0;
     }
 
     .mobile-tabbar {
@@ -1321,6 +1329,10 @@ input[type="number"]:focus {
         top: -3px;
         color: #FFFFFF;
         line-height: 16px;
+    }
+
+    #check-to-pay-now {
+        position: initial;
     }
 }
 
