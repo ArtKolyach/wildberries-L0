@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>L0 - Коляченко</title>
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css">
@@ -10,7 +12,7 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <div class="header__container">
+
             <div class="header__nav-element">
                 <div class="menu-burger__container">
                     <div class="menu-burger__lines-block">
@@ -19,26 +21,35 @@
                         <div class="menu-burger__line"></div>
                     </div>
                 </div>
-                <div class="company-name">ТОВАРЫ И ТОЧКА</div>
             </div>
+
+        <div class="company-name">ТОВАРЫ И ТОЧКА</div>
+
             <div class="header__searchbar">
                 <input class="searchbar" placeholder="Я ищу...">
             </div>
             <div class="header__navbar">
                 <div class="header__navbar-container">
                     <div class="profile__container header__navbar-item">
-                        <img class="profile__icon header__navbar-icon" src="icons/Profile.svg"/>
+                        <div>
+                            <img class="profile__icon header__navbar-icon" src="icons/Profile.svg"/>
+                        </div>
+
                         <div class="profile__text">Профиль</div>
                     </div>
                     <div class="cart__container header__navbar-item">
-                        <img class="cart__icon header__navbar-icon" src="icons/Cart.svg"/>
+                        <div>
+                            <img class="cart__icon header__navbar-icon" src="icons/Cart.svg"/>
+                        </div>
+
                         <div class="cart__amount-indicator">3</div>
                         <div class="cart__text">Корзина</div>
                     </div>
                 </div>
             </div>
-        </div>
+
     </header>
+
     <div class="main">
     <div class="main__container">
         <h1 class="main__cart-name">Корзина</h1>
@@ -60,7 +71,9 @@
                                 <div class="custom-checkbox"></div>
                             </label>
                             <img class="item-photo" src="img/photo-1.png">
+                            <div class="item-params__size_mobile">56</div>
                         </div>
+
                         <div class="available-item__description">
                             <div class="item-name">Футболка UZcotton мужская</div>
                             <div class="item-params">
@@ -208,6 +221,7 @@
                     <div class="unavailable-item available-item">
                         <div class="available-item__check-and-photo unavailable-item__photo">
                             <img class="item-photo" src="img/photo-1.png">
+                            <div class="item-params__size_mobile">56</div>
                         </div>
                         <div class="unavailable-item__description available-item__description">
                             <div class="item-name">Футболка UZcotton мужская</div>
@@ -250,6 +264,7 @@
                     <div class="unavailable-item available-item">
                         <div class="available-item__check-and-photo unavailable-item__photo">
                             <img class="item-photo" src="img/photo-3.png">
+                            <div class="item-params__size_mobile">56/54/52...</div>
                         </div>
                         <div class="unavailable-item__description available-item__description">
                             <div class="item-name">
@@ -332,17 +347,20 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
-                <div class="delivery-card__return-delivery">
-                    <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                    <div class="return-delivery__text-block">
-                        <div class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</div>
-                        <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                <div class="delivery-card__return-delivery-block">
+
+                    <div class="delivery-card__return-delivery">
+                        <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                        <div class="return-delivery__text-block">
+                            <span class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
+                            <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                        </div>
                     </div>
+
                 </div>
+
             </div>
 
             <div class="payment-card order-info-card card">
@@ -501,13 +519,14 @@
 
                 <span class="delivery-info__date delivery-info-section fake-link">5–8 фев</span>
 
-                <div class="delivery-info__return-delivery-block">
-                    <div class="delivery-card__return-delivery result-card__return-delivery">
-                        <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                        <div class="return-delivery__text-block">
-                            <div class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</div>
-                            <a class="return-delivery__link fake-link" href="">бесплатно</a>
-                        </div>
+            </div>
+
+            <div class="delivery-info__return-delivery-block result-block-section">
+                <div class="delivery-card__return-delivery result-card__return-delivery">
+                    <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                    <div class="result-block__return-delivery-text-block return-delivery__text-block">
+                        <span class=" return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
+                        <a class="return-delivery__link fake-link" href="">бесплатно</a>
                     </div>
                 </div>
             </div>
@@ -526,19 +545,21 @@
                     <div class="payment-info__card-number">1234 12•• •••• 1234</div>
                 </div>
 
-                <div class="payment-info__pay-now-block">
-                    <div class="pay-now-block__check-to-pay-block">
-                        <label class="check-to-pay-block__check choose-item_checkbox-block" for="choose-pay-now-checkbox">
-                            <input class="real-checkbox hidden" id="choose-pay-now-checkbox" type="checkbox">
-                            <div class="custom-checkbox"></div>
-                        </label>
 
-                        <div class="check-to-pay-block__text">Списать оплату сразу</div>
-                    </div>
+            </div>
 
-                    <div class="pay-now-block__description">
-                        Спишем оплату с карты при получении
-                    </div>
+            <div class="payment-info__pay-now-block result-block-section">
+                <div class="pay-now-block__check-to-pay-block">
+                    <label class="check-to-pay-block__check choose-item_checkbox-block" id="check-to-pay-now" for="check-to-pay__real-checkbox">
+                        <input class="real-checkbox hidden" id="check-to-pay__real-checkbox" type="checkbox">
+                        <div class="custom-checkbox" id="check-to-pay__custom-checkbox"></div>
+                    </label>
+
+                    <div class="check-to-pay-block__text">Списать оплату сразу</div>
+                </div>
+
+                <div class="pay-now-block__description">
+                    Спишем оплату с карты при получении
                 </div>
             </div>
 
@@ -547,16 +568,51 @@
             </div>
 
             <div class="result-block__accept_terms-of-use-block">
-                <input type="checkbox" class="terms-of-use-checkbox" checked>
+                <img class="terms-of-use__check-icon" src="icons/Terms-of-use-check.svg">
 
-
+                <div class="terms-of-use__text">
+                    <span class="terms-of-use__text-first-word">Соглашаюсь</span>
+                    <span class="terms-of-use__text-link">с правилами пользования торговой площадкой</span>
+                    <span class="terms-of-use__text-and">и</span>
+                    <span class="terms-of-use__text-link">возврата</span>
+                </div>
             </div>
         </div>
     </aside>
 </div>
+
     <footer class="footer">
         <div class="footer-text">© 2022  ООО «Товары и точка»</div>
     </footer>
+
+    <div class="mobile-tabbar">
+        <div class="mobile-tabbar__home">
+            <img class="mobile-icon mobile-tabbar_home-icon" src="icons/mobile/Home-mobile.svg">
+        </div>
+
+        <div class="mobile-tabbar_catalog">
+            <img class="mobile-icon mobile-tabbar_catalog-icon" src="icons/mobile/Catalog-mobile2.svg">
+        </div>
+
+        <div class="mobile-tabbar_cart">
+            <div>
+                <img class="mobile-icon mobile-tabbar_cart-icon" src="icons/mobile/Cart-mobile.svg"/>
+            </div>
+
+            <div class="cart__amount-indicator">3</div>
+        </div>
+
+        <div class="mobile-tabbar_favorites">
+            <img class="mobile-icon mobile-tabbar_favorites-icon" src="icons/mobile/Favorites-mobile.svg">
+        </div>
+
+        <div class="mobile-tabbar_profile">
+            <img class="mobile-icon mobile-tabbar_profile-icon" src="icons/mobile/Profile-mobile.svg">
+        </div>
+    </div>
+
 </div>
+
+
 </body>
 </html>
