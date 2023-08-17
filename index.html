@@ -61,9 +61,10 @@
                         <div class="custom-checkbox"></div>
                         <div class="choose-all__text">Выбрать всё</div>
                     </label>
-                    <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
+                    <div class="hidden-choose-text"></div>
+                    <img src="icons/Fold-flag.svg" class="choose-all__fold-flag" aria-expanded="true">
                 </div>
-                <div class="available-goods__items">
+                <div class="available-goods__items item-wrapper open">
                     <div class="available-item">
                         <div class="available-item__check-and-photo">
                             <label class="choose-item_checkbox-block" for="choose-item1-checkbox">
@@ -90,8 +91,8 @@
                         </div>
                         <div class="available-item__amount-info">
                             <div class="amount-info__counter">
-                                <div class="counter__minus">−</div>
-                                <input class="counter__value" type="number" min="1" max="2" value="1">
+                                <div class="counter__minus disabled">−</div>
+                                <input class="counter__value" type="number" value="1">
                                 <div class="counter__plus">+</div>
                             </div>
                             <div class="amount-info__items-left">Осталось 2 шт.</div>
@@ -102,11 +103,11 @@
                         </div>
                         <div class="available-item__price">
                             <div class="price__discounted-price">
-                                <div class="discounted-price__value">522</div>
+                                <div class="discounted-price__value" data-price="522">522</div>
                                 <div class="discounted-price__currency">сом</div>
                             </div>
                             <div class="price__original-price">
-                                <div class="original-price__value">1051&nbsp;</div>
+                                <div class="original-price__value" data-price="1051">1051&nbsp;</div>
                                 <div class="original-price__currency">сом</div>
                             </div>
                         </div>
@@ -139,10 +140,9 @@
                         <div class="available-item__amount-info">
                             <div class="amount-info__counter">
                                 <div class="counter__minus">−</div>
-                                <input class="counter__value" type="number" min="1" max="999" value="200">
+                                <input class="counter__value" type="number" value="200">
                                 <div class="counter__plus">+</div>
                             </div>
-                            <div class="amount-info__items-left" hidden>Осталось 2 шт.</div>
                             <div class="amount-info__action-buttons">
                                 <img class="amount-info__favourite-button" src="icons/Favorite.svg">
                                 <img class="amount-info__delete-button" src="icons/Delete.svg">
@@ -150,11 +150,11 @@
                         </div>
                         <div class="available-item__price">
                             <div class="price__discounted-price">
-                                <div class="discounted-price__value">2&nbsp;100&nbsp;047</div>
+                                <div class="discounted-price__value small-price" data-price="10500">2&nbsp;100&nbsp;047</div>
                                 <div class="discounted-price__currency">сом</div>
                             </div>
                             <div class="price__original-price">
-                                <div class="original-price__value">2&nbsp;300&nbsp;047&nbsp;</div>
+                                <div class="original-price__value" data-price="11500">2&nbsp;300&nbsp;047&nbsp;</div>
                                 <div class="original-price__currency">сом</div>
                             </div>
                         </div>
@@ -187,8 +187,8 @@
                         <div class="available-item__amount-info">
                             <div class="amount-info__counter">
                                 <div class="counter__minus">−</div>
-                                <input class="counter__value" type="number" min="1" max="2" value="2">
-                                <div class="counter__plus">+</div>
+                                <input class="counter__value" type="number" value="2">
+                                <div class="counter__plus disabled">+</div>
                             </div>
                             <div class="amount-info__items-left">Осталось 2 шт.</div>
                             <div class="amount-info__action-buttons">
@@ -198,11 +198,11 @@
                         </div>
                         <div class="available-item__price">
                             <div class="price__discounted-price">
-                                <div class="discounted-price__value">494</div>
+                                <div class="discounted-price__value" data-price="247">494</div>
                                 <div class="discounted-price__currency">сом</div>
                             </div>
                             <div class="price__original-price">
-                                <div class="original-price__value">950&nbsp;</div>
+                                <div class="original-price__value" data-price="950">950&nbsp;</div>
                                 <div class="original-price__currency">сом</div>
                             </div>
                         </div>
@@ -216,7 +216,7 @@
                     <div class="unavailable-goods__text">Отсутствуют · 3 товара</div>
                     <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
                 </div>
-                <div class="unavailable-goods__items">
+                <div class="unavailable-goods__items item-wrapper open">
 
                     <div class="unavailable-item available-item">
                         <div class="available-item__check-and-photo unavailable-item__photo">
@@ -317,21 +317,31 @@
                     <div class="delivery-card__delivery-interval delivery-card__section">
                         <div class="delivery-card__subtitle">5—6 февраля</div>
                         <div class="delivery-card__content delivery-interval__items-container">
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-1.png');">
-                                <div class="delivery-card__item-amount-indicator notification-indicator" style="display: none;" >
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">5</div>
+                            <div class="delivery-card__item notification-indicator-base"
+                                 data-index="0"
+                                 style="background-image: url('img/photo-1.png');"
+                            >
+                                <div class="delivery-card__item-amount-indicator notification-indicator"
+                                >
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="999" >5</div>
                                 </div>
                             </div>
 
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-2.png');">
+                            <div class="delivery-card__item notification-indicator-base"
+                                 data-index="1"
+                                 style="background-image: url('img/photo-2.png');"
+                            >
                                 <div class="delivery-card__item-amount-indicator notification-indicator">
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">184</div>
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="184" >184</div>
                                 </div>
                             </div>
 
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-3.png');">
+                            <div class="delivery-card__item notification-indicator-base"
+                                 data-index="2"
+                                 style="background-image: url('img/photo-3.png');"
+                            >
                                 <div class="delivery-card__item-amount-indicator notification-indicator">
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">2</div>
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="999" >2</div>
                                 </div>
                             </div>
                         </div>
@@ -340,9 +350,12 @@
                     <div class="delivery-card__delivery-interval delivery-card__section">
                         <div class="delivery-card__subtitle">7—8 февраля</div>
                         <div class="delivery-card__content delivery-interval__items-container">
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-2.png');">
+                            <div class="delivery-card__item notification-indicator-base"
+                                 data-index="1"
+                                 style="background-image: url('img/photo-2.png');"
+                            >
                                 <div class="delivery-card__item-amount-indicator notification-indicator">
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">16</div>
+                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="999">16</div>
                                 </div>
                             </div>
                         </div>
@@ -375,7 +388,7 @@
                         <div class="paycard-info__paycard-number">1234 56•• •••• 1234</div>
                         <div class="paycard-info__paycard-date">01/30</div>
                     </div>
-                    <div class="payment-card__pay-on-receiving-info">
+                    <div class="payment-card__pay-on-receiving-info pay-now-block__description">
                         Спишем оплату с карты при получении
                     </div>
                 </div>
@@ -613,6 +626,148 @@
 
 </div>
 
+<!-- modal-payment -->
+<div class="modal-payment modal hidden">
+    <div class="modal-dialog-payment">
+        <div class="modal-content-payment">
+            <div class="modal-card-header-text">Способ оплаты</div>
+            <div data-close class="modal-close">&times;</div>
 
+            <div class="modal-cards">
+                <div class="modal-card">
+                    <input type="radio" class="radio-checked hidden" id="payment-card-1" name="payment-card" checked />
+                    <label for="payment-card-1" class="choose-custom-radio"></label>
+
+                    <img class="modal-paycard-icon" src="./icons/Paycard-mir.svg" alt="mir" />
+
+                    <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                </div>
+
+                <div class="modal-card">
+                    <input type="radio" class="radio-checked hidden" id="payment-card-2" name="payment-card" />
+                    <label for="payment-card-2" class="choose-custom-radio"></label>
+
+                    <img class="modal-paycard-icon" src="./icons/Paycard-visa.svg" alt="visa" />
+
+                    <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                </div>
+
+                <div class="modal-card">
+                    <input type="radio" class="radio-checked hidden" id="payment-card-3" name="payment-card" />
+                    <label for="payment-card-3" class="choose-custom-radio"></label>
+
+                    <img class="modal-paycard-icon" src="./icons/Paycard-mastercard.svg" alt="mastercard" />
+
+                    <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                </div>
+
+                <div class="modal-card">
+                    <input type="radio" class="radio-checked hidden" id="payment-card-4" name="payment-card" />
+                    <label for="payment-card-4" class="choose-custom-radio"></label>
+
+                    <img class="modal-paycard-icon" src="./icons/Paycard-maestro.svg" alt="maestro" />
+
+                    <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                </div>
+            </div>
+
+            <input type="button" value="Выбрать" class="custom-button modal-custom-button" id="choose-card" />
+        </div>
+    </div>
+</div>
+
+<!-- modal-delivery -->
+<div data-modal class="modal-delivery modal hidden">
+    <div class="modal-dialog-delivery">
+        <div class="modal-content-delivery">
+            <div class="modal-delivery-header">Способ доставки</div>
+            <div data-close class="modal-close">&times;</div>
+
+            <div class="modal-addresses">
+                <div class="modal-buttons">
+                    <input type="button" value="В пункт выдачи" class="modal-button choose-delivery-issue" />
+                    <input type="button" value="Курьером" class="modal-button chosen-button choose-delivery-courier" />
+                </div>
+
+                <div class="modal-my-addresses">Мои адреса</div>
+
+                <!-- modal address  -->
+                <div class="modal-address">
+                    <input type="radio" class="radio-checked hidden" id="address-1" name="address" checked />
+                    <label for="address-1" class="choose-custom-radio"></label>
+
+                    <div class="modal-card-courier">Бишкек, улица Табышалиева, 57</div>
+                    <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                </div>
+
+                <div class="modal-address">
+                    <input type="radio" class="radio-checked hidden" id="address-2" name="address" />
+                    <label for="address-2" class="choose-custom-radio"></label>
+
+                    <div class="modal-card-courier">Бишкек, улица Жукеева-Пудовкина, 77/1</div>
+                    <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                </div>
+
+                <div class="modal-address">
+                    <input type="radio" class="radio-checked hidden" id="address-3" name="address" />
+                    <label for="address-3" class="choose-custom-radio"></label>
+
+                    <div class="modal-card-courier">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</div>
+                    <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                </div>
+
+                <!-- modal issue  -->
+                <div class="modal-issue hidden">
+                    <input type="radio" class="radio-checked hidden" id="issue-1" name="issue" checked />
+                    <label for="issue-1" class="choose-custom-radio"></label>
+
+                    <div class="modal-text-issue">
+                        <span class="modal-text-address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                        <div class="delivery-stars">
+                            <span class="delivery-star">&#9733;</span>
+                            <span class="delivery-point">Пункт выдачи</span>
+                        </div>
+                    </div>
+
+                    <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                </div>
+
+                <div class="modal-issue hidden">
+                    <input type="radio" class="radio-checked hidden" id="issue-2" name="issue" />
+                    <label for="issue-2" class="choose-custom-radio"></label>
+
+                    <div class="modal-text-issue">
+                        <span class="modal-text-address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                        <div class="delivery-stars">
+                            <span class="delivery-star">&#9733;</span> <span class="delivery-rate">4,99</span>
+                            <span class="delivery-point">Пункт выдачи</span>
+                        </div>
+                    </div>
+
+                    <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                </div>
+
+                <div class="modal-issue hidden">
+                    <input type="radio" class="radio-checked hidden" id="issue-3" name="issue" />
+                    <label for="issue-3" class="choose-custom-radio"></label>
+
+                    <div class="modal-text-issue">
+                        <span class="modal-text-address">г. Бишкек, улица Табышалиева, д. 57</span>
+                        <div class="delivery-stars">
+                            <span class="delivery-star">&#9733;</span> <span class="delivery-rate"> 4,99</span>
+                            <span class="delivery-point">Пункт выдачи</span>
+                        </div>
+                    </div>
+                    <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                </div>
+            </div>
+
+            <input type="button" value="Выбрать" class="custom-button modal-custom-button" id="choose-address" />
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="./js/script.js"></script>
 </body>
 </html>
