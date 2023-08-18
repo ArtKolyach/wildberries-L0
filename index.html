@@ -50,541 +50,689 @@
 
     </header>
 
+    <!--основной контент страницы-->
     <div class="main">
-    <div class="main__container">
-        <h1 class="main__cart-name">Корзина</h1>
-        <div class="main__goods">
-            <div class="available-goods">
-                <div class="available-goods__folding-header folding-header">
-                    <label class="choose-all_checkbox-block" for="choose-all-checkbox">
-                        <input class="real-checkbox hidden" id="choose-all-checkbox" type="checkbox" checked>
-                        <div class="custom-checkbox"></div>
-                        <div class="choose-all__text">Выбрать всё</div>
-                    </label>
-                    <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
+        <!--основная часть контента-->
+        <div class="main__container">
+            <h1 class="main__cart-name">Корзина</h1>
+            <div class="main__goods">
+                <!--доступные товары-->
+                <div class="available-goods">
+                    <div class="available-goods__folding-header folding-header">
+                        <label class="choose-all_checkbox-block" for="choose-all-checkbox">
+                            <input class="real-checkbox hidden" id="choose-all-checkbox" type="checkbox" checked>
+                            <div class="custom-checkbox"></div>
+                            <div class="choose-all__text">Выбрать всё</div>
+                        </label>
+                        <div class="hidden-choose-text"></div>
+                        <img src="icons/Fold-flag.svg" class="choose-all__fold-flag" aria-expanded="true">
+                    </div>
+
+                    <div class="available-goods__items item-wrapper open">
+                        <div class="available-item">
+                            <div class="available-item__check-and-photo">
+                                <label class="choose-item_checkbox-block" for="choose-item1-checkbox">
+                                    <input class="real-checkbox hidden" id="choose-item1-checkbox" data-number="0" type="checkbox" checked>
+                                    <div class="custom-checkbox"></div>
+                                </label>
+                                <img class="item-photo" src="img/photo-1.png">
+                                <div class="item-params__size_mobile">56</div>
+                            </div>
+
+                            <div class="available-item__description">
+                                <div class="item-name">Футболка UZcotton мужская</div>
+                                <div class="item-params">
+                                    <div class="item-params__color item-params-text">Цвет: белый</div>
+                                    <div class="item-params__size item-params-text">Размер: 56</div>
+                                </div>
+                                <div class="item-warehouse item-footer">Коледино WB</div>
+                                <div class="item-provider item-footer">
+                                    ООО Вайлдберриз
+
+                                    <div class="item-provider__info-icon-wrapper">
+                                        <img class="item-provider__info-icon" src="icons/Info.svg">
+                                    </div>
+
+                                    <div class="good-info-tooltip tooltip">
+                                        <div class="good-tooltip-header">OOO «ВАЙЛДБЕРРИЗ»</div>
+                                        <div class="good-tooltip-main">
+                                            <div>ОГРН: 5167746237148</div>
+                                            <div>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="available-item__amount-info">
+                                <div class="amount-info__counter">
+                                    <div class="counter__minus disabled">−</div>
+                                    <input class="counter__value" type="number" value="1">
+                                    <div class="counter__plus">+</div>
+                                </div>
+                                <div class="amount-info__items-left">Осталось 2 шт.</div>
+                                <div class="amount-info__action-buttons">
+                                    <img class="amount-info__favourite-button" src="icons/Favorite-color.svg">
+                                    <img class="amount-info__delete-button" src="icons/Delete-red.svg">
+                                </div>
+                            </div>
+                            <div class="available-item__price">
+                                <div class="price__discounted-price">
+                                    <div class="discounted-price__value" data-price="522">522</div>
+                                    <div class="discounted-price__currency">сом</div>
+                                </div>
+                                <div class="price__original-price">
+                                    <div class="original-price__value" data-price="1051">1051&nbsp;</div>
+                                    <div class="original-price__currency">сом</div>
+                                </div>
+                                <div class="good-previous-tooltip tooltip">
+                                    <div class="good-tooltip-info">
+                                        <span class="good-tooltip-discount">
+                                            Скидка
+                                            <span class="discont-percentage-tooltip">5%</span>
+                                        </span>
+                                        <span class="good-tooltip-price">
+                                            −
+                                            <span class="discont-price-tooltip">500 </span>
+                                            сом
+                                        </span>
+                                    </div>
+
+                                    <div class="good-tooltip-info">
+                                        <span class="good-tooltip-discount">
+                                            Скидка покупателя
+                                            <span class="discont-percentage-tooltip">5%</span>
+                                        </span>
+
+                                        <span class="good-tooltip-price">
+                                            −
+                                            <span class="discont-price-tooltip">500 </span>
+                                            сом
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="available-item">
+                            <div class="available-item__check-and-photo">
+                                <label class="choose-item_checkbox-block" for="choose-item2-checkbox">
+                                    <input class="real-checkbox hidden" id="choose-item2-checkbox" data-number="1" type="checkbox" checked>
+                                    <div class="custom-checkbox"></div>
+                                </label>
+                                <img class="item-photo" src="img/photo-2.png">
+                            </div>
+                            <div class="available-item__description">
+                                <div class="item-name">
+                                    Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                                </div>
+                                <div class="item-params">
+                                    <div class="item-params__color item-params-text">Цвет: прозрачный</div>
+                                    <div class="item-params__size item-params-text" hidden>Размер: 56</div>
+                                </div>
+                                <div class="item-warehouse item-footer">Коледино WB</div>
+                                <div class="item-provider item-footer">
+                                    ООО Мегапрофстиль
+                                    <div class="item-provider__info-icon-wrapper">
+                                        <img class="item-provider__info-icon" src="icons/Info.svg">
+                                    </div>
+
+                                    <div class="good-info-tooltip tooltip">
+                                        <div class="good-tooltip-header">OOO «ВАЙЛДБЕРРИЗ»</div>
+                                        <div class="good-tooltip-main">
+                                            <div>ОГРН: 5167746237148</div>
+                                            <div>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="available-item__amount-info">
+                                <div class="amount-info__counter">
+                                    <div class="counter__minus">−</div>
+                                    <input class="counter__value" type="number" value="200">
+                                    <div class="counter__plus">+</div>
+                                </div>
+                                <div class="amount-info__action-buttons">
+                                    <img class="amount-info__favourite-button" src="icons/Favorite-color.svg">
+                                    <img class="amount-info__delete-button" src="icons/Delete-red.svg">
+                                </div>
+                            </div>
+                            <div class="available-item__price">
+                                <div class="price__discounted-price">
+                                    <div class="discounted-price__value small-price" data-price="10500">2&nbsp;100&nbsp;047</div>
+                                    <div class="discounted-price__currency">сом</div>
+                                </div>
+
+                                <div class="price__original-price">
+                                    <div class="original-price__value" data-price="11500">2&nbsp;300&nbsp;047&nbsp;</div>
+                                    <div class="original-price__currency">сом</div>
+                                </div>
+
+                                <div class="good-previous-tooltip tooltip">
+                                    <div class="good-tooltip-info">
+                                        <span class="good-tooltip-discount">
+                                            Скидка
+                                            <span class="discont-percentage-tooltip">5%</span>
+                                        </span>
+                                        <span class="good-tooltip-price">
+                                            −
+                                            <span class="discont-price-tooltip">500 </span>
+                                            сом
+                                        </span>
+                                    </div>
+
+                                    <div class="good-tooltip-info">
+                                        <span class="good-tooltip-discount">
+                                            Скидка покупателя
+                                            <span class="discont-percentage-tooltip">5%</span>
+                                        </span>
+
+                                        <span class="good-tooltip-price">
+                                            −
+                                            <span class="discont-price-tooltip">500 </span>
+                                            сом
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="available-item">
+                            <div class="available-item__check-and-photo">
+                                <label class="choose-item_checkbox-block" for="choose-item3-checkbox">
+                                    <input class="real-checkbox hidden" id="choose-item3-checkbox" data-number="2" type="checkbox" checked>
+                                    <div class="custom-checkbox"></div>
+                                </label>
+                                <img class="item-photo" src="img/photo-3.png">
+                            </div>
+                            <div class="available-item__description">
+                                <div class="item-name">
+                                    Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber‑Castell
+                                </div>
+                                <div class="item-params" style="display: none">
+                                    <div class="item-params__color item-params-text">Цвет: прозрачный</div>
+                                    <div class="item-params__size item-params-text" hidden>Размер: 56</div>
+                                </div>
+                                <div class="item-warehouse item-footer">Коледино WB</div>
+                                <div class="item-provider item-footer">
+                                    ООО Вайлдберриз
+                                    <div class="item-provider__info-icon-wrapper">
+                                        <img class="item-provider__info-icon" src="icons/Info.svg">
+                                    </div>
+
+                                    <div class="good-info-tooltip tooltip">
+                                        <div class="good-tooltip-header">OOO «ВАЙЛДБЕРРИЗ»</div>
+                                        <div class="good-tooltip-main">
+                                            <div>ОГРН: 5167746237148</div>
+                                            <div>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="available-item__amount-info">
+                                <div class="amount-info__counter">
+                                    <div class="counter__minus">−</div>
+                                    <input class="counter__value" type="number" value="2">
+                                    <div class="counter__plus disabled">+</div>
+                                </div>
+                                <div class="amount-info__items-left">Осталось 2 шт.</div>
+                                <div class="amount-info__action-buttons">
+                                    <img class="amount-info__favourite-button" src="icons/Favorite-color.svg">
+                                    <img class="amount-info__delete-button" src="icons/Delete-red.svg">
+                                </div>
+                            </div>
+                            <div class="available-item__price">
+                                <div class="price__discounted-price">
+                                    <div class="discounted-price__value" data-price="247">494</div>
+                                    <div class="discounted-price__currency">сом</div>
+                                </div>
+
+                                <div class="price__original-price">
+                                    <div class="original-price__value" data-price="950">950&nbsp;</div>
+                                    <div class="original-price__currency">сом</div>
+                                </div>
+
+                                <div class="good-previous-tooltip tooltip">
+                                    <div class="good-tooltip-info">
+                                        <span class="good-tooltip-discount">
+                                            Скидка
+                                            <span class="discont-percentage-tooltip">5%</span>
+                                        </span>
+                                        <span class="good-tooltip-price">
+                                            −
+                                            <span class="discont-price-tooltip">500 </span>
+                                            сом
+                                        </span>
+                                    </div>
+
+                                    <div class="good-tooltip-info">
+                                        <span class="good-tooltip-discount">
+                                            Скидка покупателя
+                                            <span class="discont-percentage-tooltip">5%</span>
+                                        </span>
+
+                                        <span class="good-tooltip-price">
+                                            −
+                                            <span class="discont-price-tooltip">500 </span>
+                                            сом
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="available-goods__items">
-                    <div class="available-item">
-                        <div class="available-item__check-and-photo">
-                            <label class="choose-item_checkbox-block" for="choose-item1-checkbox">
-                                <input class="real-checkbox hidden" id="choose-item1-checkbox" type="checkbox" checked>
-                                <div class="custom-checkbox"></div>
-                            </label>
-                            <img class="item-photo" src="img/photo-1.png">
-                            <div class="item-params__size_mobile">56</div>
+
+                <!--недоступные товары-->
+                <div class="unavailable-goods">
+                    <div class="unavailable-goods__folding-header folding-header">
+                        <div class="unavailable-goods__text">Отсутствуют · 3 товара</div>
+                        <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
+                    </div>
+
+                    <div class="unavailable-goods__items item-wrapper open">
+
+                        <div class="unavailable-item available-item">
+                            <div class="available-item__check-and-photo unavailable-item__photo">
+                                <img class="item-photo" src="img/photo-1.png">
+                                <div class="item-params__size_mobile">56</div>
+                            </div>
+                            <div class="unavailable-item__description available-item__description">
+                                <div class="item-name">Футболка UZcotton мужская</div>
+                                <div class="item-params">
+                                    <div class="item-params__color item-params-text">Цвет: белый</div>
+                                    <div class="item-params__size item-params-text">Размер: 56</div>
+                                </div>
+                            </div>
+                            <div class="available-item__amount-info">
+                                <div class="amount-info__action-buttons">
+                                    <img class="amount-info__favourite-button" src="icons/Favorite-color.svg">
+                                    <img class="amount-info__delete-button" src="icons/Delete-red.svg">
+                                </div>
+                            </div>
+                            <div class="available-item__price"></div>
                         </div>
 
-                        <div class="available-item__description">
-                            <div class="item-name">Футболка UZcotton мужская</div>
-                            <div class="item-params">
-                                <div class="item-params__color item-params-text">Цвет: белый</div>
-                                <div class="item-params__size item-params-text">Размер: 56</div>
+                        <div class="unavailable-item available-item">
+                            <div class="available-item__check-and-photo unavailable-item__photo">
+                                <img class="item-photo" src="img/photo-2.png">
                             </div>
-                            <div class="item-warehouse item-footer">Коледино WB</div>
-                            <div class="item-provider item-footer">
-                                ООО Вайлдберриз
-                                <div class="item-provider__info-icon-wrapper">
-                                    <img class="item-provider__info-icon" src="icons/Info.svg">
+                            <div class="unavailable-item__description available-item__description">
+                                <div class="item-name">
+                                    Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                                </div>
+                                <div class="item-params">
+                                    <div class="item-params__color item-params-text">Цвет: прозрачный</div>
+                                    <div class="item-params__size item-params-text" hidden>Размер: 56</div>
+                                </div>
+                            </div>
+                            <div class="available-item__amount-info">
+                                <div class="amount-info__action-buttons">
+                                    <img class="amount-info__favourite-button" src="icons/Favorite-color.svg">
+                                    <img class="amount-info__delete-button" src="icons/Delete-red.svg">
+                                </div>
+                            </div>
+                            <div class="available-item__price"></div>
+                        </div>
+
+                        <div class="unavailable-item available-item">
+                            <div class="available-item__check-and-photo unavailable-item__photo">
+                                <img class="item-photo" src="img/photo-3.png">
+                                <div class="item-params__size_mobile">56/54/52...</div>
+                            </div>
+                            <div class="unavailable-item__description available-item__description">
+                                <div class="item-name">
+                                    Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber‑Castell
+                                </div>
+                                <div class="item-params" style="display: none">
+                                    <div class="item-params__color item-params-text">Цвет: прозрачный</div>
+                                    <div class="item-params__size item-params-text" hidden>Размер: 56</div>
+                                </div>
+                            </div>
+                            <div class="available-item__amount-info">
+                                <div class="amount-info__action-buttons">
+                                    <img class="amount-info__favourite-button" src="icons/Favorite-color.svg">
+                                    <img class="amount-info__delete-button" src="icons/Delete-red.svg">
+                                </div>
+                            </div>
+                            <div class="available-item__price"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--блок доставки-->
+                <div class="delivery-card order-info-card card">
+                    <div class="info-card-header">
+                         <div class="info-card__title">Способ доставки</div>
+                         <input class="info-card-button delivery-card__change-button address-button" type="button" value="Изменить">
+                     </div>
+
+                    <div class="delivery-card__main">
+                        <div class="delivery-card__delivery-point delivery-card__section">
+                            <div class="delivery-card__subtitle">Пункт выдачи</div>
+                            <div class="delivery-card__content">
+                                <div class="delivery-point__address delivery-address" >Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+                                <div class="delivery-point__rating-hours-box">
+                                    <div class="delivery-point__rating">
+                                        <span class="delivery-star delivery-star-text">★</span>
+                                        <div class="delivery-point__rating-number delivery-rate">4.99</div>
+                                    </div>
+                                    <div class="delivery-point__active-hours">Ежедневно с 10 до 21</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="available-item__amount-info">
-                            <div class="amount-info__counter">
-                                <div class="counter__minus">−</div>
-                                <input class="counter__value" type="number" min="1" max="2" value="1">
-                                <div class="counter__plus">+</div>
-                            </div>
-                            <div class="amount-info__items-left">Осталось 2 шт.</div>
-                            <div class="amount-info__action-buttons">
-                                <img class="amount-info__favourite-button" src="icons/Favorite.svg">
-                                <img class="amount-info__delete-button" src="icons/Delete.svg">
+
+                        <div class="delivery-card__delivery-cost delivery-card__section">
+                            <div class="delivery-card__subtitle">Стоимость доставки</div>
+                            <div class="delivery-card__content">Бесплатно</div>
+                        </div>
+
+                        <div class="delivery-card__delivery-interval delivery-card__section">
+                            <div class="delivery-card__subtitle">5—6 февраля</div>
+                            <div class="delivery-card__content delivery-interval__items-container">
+                                <div class="delivery-card__item notification-indicator-base"
+                                     data-index="0"
+                                     style="background-image: url('img/photo-1.png');"
+                                >
+                                    <div class="delivery-card__item-amount-indicator notification-indicator"
+                                    >
+                                        <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="999" >5</div>
+                                    </div>
+                                </div>
+
+                                <div class="delivery-card__item notification-indicator-base"
+                                     data-index="1"
+                                     style="background-image: url('img/photo-2.png');"
+                                >
+                                    <div class="delivery-card__item-amount-indicator notification-indicator">
+                                        <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="184" >184</div>
+                                    </div>
+                                </div>
+
+                                <div class="delivery-card__item notification-indicator-base"
+                                     data-index="2"
+                                     style="background-image: url('img/photo-3.png');"
+                                >
+                                    <div class="delivery-card__item-amount-indicator notification-indicator">
+                                        <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="999" >2</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="available-item__price">
-                            <div class="price__discounted-price">
-                                <div class="discounted-price__value">522</div>
-                                <div class="discounted-price__currency">сом</div>
-                            </div>
-                            <div class="price__original-price">
-                                <div class="original-price__value">1051&nbsp;</div>
-                                <div class="original-price__currency">сом</div>
+
+                        <div class="delivery-card__delivery-interval delivery-card__section">
+                            <div class="delivery-card__subtitle">7—8 февраля</div>
+                            <div class="delivery-card__content delivery-interval__items-container">
+                                <div class="delivery-card__item notification-indicator-base"
+                                     data-index="1"
+                                     style="background-image: url('img/photo-2.png');"
+                                >
+                                    <div class="delivery-card__item-amount-indicator notification-indicator">
+                                        <div class="delivery-card__item-amount-indicator_value notification-indicator-value" data-max="999">16</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="available-item">
-                        <div class="available-item__check-and-photo">
-                            <label class="choose-item_checkbox-block" for="choose-item2-checkbox">
-                                <input class="real-checkbox hidden" id="choose-item2-checkbox" type="checkbox" checked>
-                                <div class="custom-checkbox"></div>
-                            </label>
-                            <img class="item-photo" src="img/photo-2.png">
-                        </div>
-                        <div class="available-item__description">
-                            <div class="item-name">
-                                Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe
-                            </div>
-                            <div class="item-params">
-                                <div class="item-params__color item-params-text">Цвет: прозрачный</div>
-                                <div class="item-params__size item-params-text" hidden>Размер: 56</div>
-                            </div>
-                            <div class="item-warehouse item-footer">Коледино WB</div>
-                            <div class="item-provider item-footer">
-                                ООО Мегапрофстиль
-                                <div class="item-provider__info-icon-wrapper">
-                                    <img class="item-provider__info-icon" src="icons/Info.svg">
+                    <div class="delivery-card__return-delivery-block">
+
+                        <div class="delivery-card__return-delivery">
+                            <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
+                            <div class="return-delivery__text-block">
+                                <span class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
+                                <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                                <div class="aside-price-tooltip tooltip">
+                                    Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
                                 </div>
                             </div>
                         </div>
-                        <div class="available-item__amount-info">
-                            <div class="amount-info__counter">
-                                <div class="counter__minus">−</div>
-                                <input class="counter__value" type="number" min="1" max="999" value="200">
-                                <div class="counter__plus">+</div>
-                            </div>
-                            <div class="amount-info__items-left" hidden>Осталось 2 шт.</div>
-                            <div class="amount-info__action-buttons">
-                                <img class="amount-info__favourite-button" src="icons/Favorite.svg">
-                                <img class="amount-info__delete-button" src="icons/Delete.svg">
-                            </div>
-                        </div>
-                        <div class="available-item__price">
-                            <div class="price__discounted-price">
-                                <div class="discounted-price__value">2&nbsp;100&nbsp;047</div>
-                                <div class="discounted-price__currency">сом</div>
-                            </div>
-                            <div class="price__original-price">
-                                <div class="original-price__value">2&nbsp;300&nbsp;047&nbsp;</div>
-                                <div class="original-price__currency">сом</div>
-                            </div>
-                        </div>
+
+                    </div>
+                </div>
+
+                <!--блок оплаты-->
+                <div class="payment-card order-info-card card">
+                    <div class="info-card-header">
+                        <div class="info-card__title">Способ оплаты</div>
+                        <input class="info-card-button paycard-button" type="button" value="Изменить">
                     </div>
 
-                    <div class="available-item">
-                        <div class="available-item__check-and-photo">
-                            <label class="choose-item_checkbox-block" for="choose-item3-checkbox">
-                                <input class="real-checkbox hidden" id="choose-item3-checkbox" type="checkbox" checked>
-                                <div class="custom-checkbox"></div>
-                            </label>
-                            <img class="item-photo" src="img/photo-3.png">
+                    <div class="payment-card__main">
+                        <div class="payment-card__paycard-info">
+                            <img class="paycard-info__icon chosen-paycard-icon" src="icons/Paycard-mir.svg">
+                            <div class="paycard-info__paycard-number chosen-paycard-number">1234 56•• •••• 1234</div>
+                            <div class="paycard-info__paycard-date">01/30</div>
                         </div>
-                        <div class="available-item__description">
-                            <div class="item-name">
-                                Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber‑Castell
-                            </div>
-                            <div class="item-params" style="display: none">
-                                <div class="item-params__color item-params-text">Цвет: прозрачный</div>
-                                <div class="item-params__size item-params-text" hidden>Размер: 56</div>
-                            </div>
-                            <div class="item-warehouse item-footer">Коледино WB</div>
-                            <div class="item-provider item-footer">
-                                ООО Вайлдберриз
-                                <div class="item-provider__info-icon-wrapper">
-                                    <img class="item-provider__info-icon" src="icons/Info.svg">
+                        <div class="payment-card__pay-on-receiving-info pay-now-block__description">
+                            Спишем оплату с карты при получении
+                        </div>
+                    </div>
+                </div>
+
+                <!--блок получателя-->
+                <div class="receiver-card order-info-card card">
+                     <div class="info-card-header">
+                         <div class="info-card__title">Получатель</div>
+                     </div>
+
+                    <div class="receiver-card__main">
+                        <div class="receiver-card__name-surname-block receiver-card__section">
+                            <div class="input-form-container">
+                                <div class="input-form-upper-label"></div>
+
+                                <div class="input-form-block">
+                                    <input type="text" class="input-form-receiver" id="name-input-form" placeholder="&nbsp;">
+                                    <label for="name-input-form" class="label-input-form">Имя</label>
                                 </div>
+
+                                <div class="input-form-error hidden" data-empty="Укажите имя"></div>
+                                <div class="fake-form-error"></div>
+                            </div>
+
+                            <div class="input-form-container">
+                                <div class="input-form-upper-label"></div>
+
+                                <div class="input-form-block">
+                                    <input type="text" class="input-form-receiver" id="surname-input-form" placeholder="&nbsp;">
+                                    <label for="surname-input-form" class="label-input-form">Фамилия</label>
+                                </div>
+
+                                <div class="input-form-error hidden" data-empty="Укажите фамилию"></div>
+                                <div class="fake-form-error"></div>
                             </div>
                         </div>
-                        <div class="available-item__amount-info">
-                            <div class="amount-info__counter">
-                                <div class="counter__minus">−</div>
-                                <input class="counter__value" type="number" min="1" max="2" value="2">
-                                <div class="counter__plus">+</div>
+
+                        <div class="receiver-card__mail-phone-inn-block receiver-card__section">
+                            <div class="input-form-container">
+                                <div class="input-form-upper-label"></div>
+
+                                <div class="input-form-block">
+                                    <input type="text" class="input-form-receiver" id="email-input-form" placeholder="&nbsp;">
+                                    <label for="email-input-form" class="label-input-form">Почта</label>
+                                </div>
+
+                                <div class="input-form-error hidden"
+                                        data-empty="Укажите номер телефона"
+                                        data-error="Проверьте адрес электронной почты"
+                                ></div>
+                                <div class="fake-form-error"></div>
                             </div>
-                            <div class="amount-info__items-left">Осталось 2 шт.</div>
-                            <div class="amount-info__action-buttons">
-                                <img class="amount-info__favourite-button" src="icons/Favorite.svg">
-                                <img class="amount-info__delete-button" src="icons/Delete.svg">
+
+                            <div class="input-form-container">
+                                <div class="input-form-upper-label"></div>
+
+                                <div class="input-form-block">
+                                    <input type="text" class="input-form-receiver" id="phone-input-form" placeholder="&nbsp;">
+                                    <label for="phone-input-form" class="label-input-form">Телефон</label>
+                                </div>
+
+                                <div class="input-form-error hidden"
+                                     data-empty="Укажите почту"
+                                     data-error="Формат: +9 999 999-99-99"
+                                ></div>
+                                <div class="fake-form-error"></div>
                             </div>
-                        </div>
-                        <div class="available-item__price">
-                            <div class="price__discounted-price">
-                                <div class="discounted-price__value">494</div>
-                                <div class="discounted-price__currency">сом</div>
-                            </div>
-                            <div class="price__original-price">
-                                <div class="original-price__value">950&nbsp;</div>
-                                <div class="original-price__currency">сом</div>
+
+                            <div class="input-form-container">
+                                <div class="input-form-upper-label"></div>
+
+                                <div class="input-form-block">
+                                        <input type="text" class="input-form-receiver" id="inn-input-form" placeholder="&nbsp;">
+                                        <label for="inn-input-form" class="label-input-form">ИНН</label>
+                                </div>
+
+                                <div class="input-form-error hidden"
+                                     data-empty="Укажите ИНН"
+                                     data-error="Проверьте ИНН"
+                                >Ошибка</div>
+                                <div class="input-form-error" id="inn-input-tip">Для таможенного оформления</div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!--корзина-->
+        <aside class="result-block card">
+            <div class="info-card-header result-block__header">
+                <div class="info-card__title result-block__title">
+                    <div class="result-block__title-text">Итого</div>
 
+                    <div class="result-block__title-sum">
+                        <div class="title-sum__value">2 101 063</div>
+                        <div class="title-sum__currency">&nbsp;сом</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="unavailable-goods">
-                <div class="unavailable-goods__folding-header folding-header">
-                    <div class="unavailable-goods__text">Отсутствуют · 3 товара</div>
-                    <img src="icons/Fold-flag.svg" class="choose-all__fold-flag">
-                </div>
-                <div class="unavailable-goods__items">
 
-                    <div class="unavailable-item available-item">
-                        <div class="available-item__check-and-photo unavailable-item__photo">
-                            <img class="item-photo" src="img/photo-1.png">
-                            <div class="item-params__size_mobile">56</div>
+            <div class="result-block__main">
+                <div class="result-block__cost-calculations result-block-section">
+                    <div class="cost-calculations__total-amount-and-sum cost-calculations-section">
+
+                        <div class="total-amount-and-sum__amount cost-calculations__section-part">
+                            <div class="total-amount-and-sum__amount-number">203</div>
+
+                            <div class="total-amount-and-sum__amount-text">&nbsp;товара</div>
                         </div>
-                        <div class="unavailable-item__description available-item__description">
-                            <div class="item-name">Футболка UZcotton мужская</div>
-                            <div class="item-params">
-                                <div class="item-params__color item-params-text">Цвет: белый</div>
-                                <div class="item-params__size item-params-text">Размер: 56</div>
-                            </div>
+
+
+                        <div class="total-amount-and-sum__sum cost-calculations__section-part">
+                            <div class="total-amount-and-sum__sum-value">2 302 048</div>
+
+                            <div class="total-amount-and-sum__sum-currency">&nbsp;сом</div>
                         </div>
-                        <div class="available-item__amount-info">
-                            <div class="amount-info__action-buttons">
-                                <img class="amount-info__favourite-button" src="icons/Favorite.svg">
-                                <img class="amount-info__delete-button" src="icons/Delete.svg">
-                            </div>
-                        </div>
-                        <div class="available-item__price"></div>
+
                     </div>
 
-                    <div class="unavailable-item available-item">
-                        <div class="available-item__check-and-photo unavailable-item__photo">
-                            <img class="item-photo" src="img/photo-2.png">
+                    <div class="cost-calculations__total-discount cost-calculations-section">
+
+                        <div class="total-discount__title cost-calculations__section-part">Скидка</div>
+
+                        <div class="total-discount__sum cost-calculations__section-part">
+                            <div class="total-discount__sum-value">−200 985</div>
+
+                            <div class="total-discount__sum-currency">&nbsp;сом</div>
                         </div>
-                        <div class="unavailable-item__description available-item__description">
-                            <div class="item-name">
-                                Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe
-                            </div>
-                            <div class="item-params">
-                                <div class="item-params__color item-params-text">Цвет: прозрачный</div>
-                                <div class="item-params__size item-params-text" hidden>Размер: 56</div>
-                            </div>
-                        </div>
-                        <div class="available-item__amount-info">
-                            <div class="amount-info__action-buttons">
-                                <img class="amount-info__favourite-button" src="icons/Favorite.svg">
-                                <img class="amount-info__delete-button" src="icons/Delete.svg">
-                            </div>
-                        </div>
-                        <div class="available-item__price"></div>
+
                     </div>
 
-                    <div class="unavailable-item available-item">
-                        <div class="available-item__check-and-photo unavailable-item__photo">
-                            <img class="item-photo" src="img/photo-3.png">
-                            <div class="item-params__size_mobile">56/54/52...</div>
+                    <div class="cost-calculations__total-delivery-cost cost-calculations-section">
+                        <div class="total-delivery-cost cost-calculations__section-part">
+                            Доставка
                         </div>
-                        <div class="unavailable-item__description available-item__description">
-                            <div class="item-name">
-                                Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber‑Castell
-                            </div>
-                            <div class="item-params" style="display: none">
-                                <div class="item-params__color item-params-text">Цвет: прозрачный</div>
-                                <div class="item-params__size item-params-text" hidden>Размер: 56</div>
-                            </div>
-                        </div>
-                        <div class="available-item__amount-info">
-                            <div class="amount-info__action-buttons">
-                                <img class="amount-info__favourite-button" src="icons/Favorite.svg">
-                                <img class="amount-info__delete-button" src="icons/Delete.svg">
-                            </div>
-                        </div>
-                        <div class="available-item__price"></div>
-                    </div>
 
-                </div>
-
-            </div>
-
-            <div class="delivery-card order-info-card card">
-                <div class="info-card-header">
-                     <div class="info-card__title">Способ доставки</div>
-                     <input class="info-card-button delivery-card__change-button" type="button" value="Изменить">
-                 </div>
-
-                <div class="delivery-card__main">
-                    <div class="delivery-card__delivery-point delivery-card__section">
-                        <div class="delivery-card__subtitle">Пункт выдачи</div>
-                        <div class="delivery-card__content">
-                            <div class="delivery-point__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
-                            <div class="delivery-point__rating-hours-box">
-                                <div class="delivery-point__rating">
-                                    <img src="icons/Star.svg" class="delivery-point__rating-icon">
-                                    <div class="delivery-point__rating-number">4.99</div>
-                                </div>
-                                <div class="delivery-point__active-hours">Ежедневно с 10 до 21</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="delivery-card__delivery-cost delivery-card__section">
-                        <div class="delivery-card__subtitle">Стоимость доставки</div>
-                        <div class="delivery-card__content">Бесплатно</div>
-                    </div>
-
-                    <div class="delivery-card__delivery-interval delivery-card__section">
-                        <div class="delivery-card__subtitle">5—6 февраля</div>
-                        <div class="delivery-card__content delivery-interval__items-container">
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-1.png');">
-                                <div class="delivery-card__item-amount-indicator notification-indicator" style="display: none;" >
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">5</div>
-                                </div>
-                            </div>
-
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-2.png');">
-                                <div class="delivery-card__item-amount-indicator notification-indicator">
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">184</div>
-                                </div>
-                            </div>
-
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-3.png');">
-                                <div class="delivery-card__item-amount-indicator notification-indicator">
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">2</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="delivery-card__delivery-interval delivery-card__section">
-                        <div class="delivery-card__subtitle">7—8 февраля</div>
-                        <div class="delivery-card__content delivery-interval__items-container">
-                            <div class="delivery-card__item notification-indicator-base" style="background-image: url('img/photo-2.png');">
-                                <div class="delivery-card__item-amount-indicator notification-indicator">
-                                    <div class="delivery-card__item-amount-indicator_value notification-indicator-value">16</div>
-                                </div>
-                            </div>
+                        <div class="total-delivery-cost cost-calculations__section-part">
+                            Бесплатно
                         </div>
                     </div>
                 </div>
 
-                <div class="delivery-card__return-delivery-block">
+                <div class="result-block__delivery-info result-block-section">
+                    <div class="delivery-info__header">
+                        <div class="delivery-info__title delivery-info-section">Доставка в пункт выдачи</div>
 
-                    <div class="delivery-card__return-delivery">
+                        <div class="delivery-info__change-button result-block__change-button">
+                            <img class="result-block__change-icon address-button" src="icons/Pencil.svg">
+                        </div>
+                    </div>
+
+                    <div class="delivery-info__address delivery-address delivery-info-section">
+                        Бишкек, улица Ахматбека Суюмбаева, 12/1
+                    </div>
+
+                    <span class="delivery-info__date delivery-info-section fake-link">5–8 фев</span>
+
+                </div>
+
+                <div class="delivery-info__return-delivery-block result-block-section">
+                    <div class="delivery-card__return-delivery result-card__return-delivery">
                         <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                        <div class="return-delivery__text-block">
-                            <span class="return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
+                        <div class="result-block__return-delivery-text-block return-delivery__text-block">
+                            <span class=" return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
                             <a class="return-delivery__link fake-link" href="">бесплатно</a>
+                            <div class="aside-price-tooltip tooltip">
+                                Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-block__payment-info result-block-section">
+                    <div class="payment-info__header delivery-info__header">
+                        <div class="delivery-info__title delivery-info-section">Оплата картой</div>
+
+                        <div class="delivery-info__change-button result-block__change-button">
+                            <img class="result-block__change-icon paycard-button" src="icons/Pencil.svg">
                         </div>
                     </div>
 
-                </div>
-
-            </div>
-
-            <div class="payment-card order-info-card card">
-                <div class="info-card-header">
-                    <div class="info-card__title">Способ оплаты</div>
-                    <input class="info-card-button" type="button" value="Изменить">
-                </div>
-
-                <div class="payment-card__main">
-                    <div class="payment-card__paycard-info">
-                        <img class="paycard-info__icon" src="icons/Paycard-mir.svg">
-                        <div class="paycard-info__paycard-number">1234 56•• •••• 1234</div>
-                        <div class="paycard-info__paycard-date">01/30</div>
+                    <div class="payment-info__main">
+                        <img class="payment-info__card-icon chosen-paycard-icon" src="icons/Paycard-mir.svg">
+                        <div class="payment-info__card-number chosen-paycard-number">1234 12•• •••• 1234</div>
                     </div>
-                    <div class="payment-card__pay-on-receiving-info">
+
+
+                </div>
+
+                <div class="payment-info__pay-now-block result-block-section">
+                    <div class="pay-now-block__check-to-pay-block">
+                        <label class="check-to-pay-block__check choose-item_checkbox-block" id="check-to-pay-now" for="check-to-pay__real-checkbox">
+                            <input class="real-checkbox hidden" id="check-to-pay__real-checkbox" type="checkbox">
+                            <div class="custom-checkbox" id="check-to-pay__custom-checkbox"></div>
+                        </label>
+
+                        <div class="check-to-pay-block__text">Списать оплату сразу</div>
+                    </div>
+
+                    <div class="pay-now-block__description">
                         Спишем оплату с карты при получении
                     </div>
                 </div>
-            </div>
 
-            <div class="receiver-card order-info-card card">
-                 <div class="info-card-header">
-                     <div class="info-card__title">Получатель</div>
-                 </div>
+                <div class="result-block__order-button-block">
+                    <input type="button" class="custom-button" id="order-button" value="Заказать">
+                </div>
 
-                <div class="receiver-card__main">
-                    <div class="receiver-card__name-surname-block receiver-card__section">
-                        <div class="input-form-container">
-                            <div class="input-form-upper-label"></div>
+                <div class="result-block__accept_terms-of-use-block">
+                    <img class="terms-of-use__check-icon" src="icons/Terms-of-use-check.svg">
 
-                            <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="name-input-form" placeholder="&nbsp;">
-                                <label for="name-input-form" class="label-input-form">Имя</label>
-                            </div>
-
-                            <div class="input-form-error" data-empty="Укажите имя"></div>
-                        </div>
-
-                        <div class="input-form-container">
-                            <div class="input-form-upper-label"></div>
-
-                            <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="surname-input-form" placeholder="&nbsp;">
-                                <label for="surname-input-form" class="label-input-form">Фамилия</label>
-                            </div>
-
-                            <div class="input-form-error" data-empty="Укажите фамилию"></div>
-                        </div>
-                    </div>
-
-                    <div class="receiver-card__mail-phone-inn-block receiver-card__section">
-                        <div class="input-form-container">
-                            <div class="input-form-upper-label"></div>
-
-                            <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="email-input-form" placeholder="&nbsp;">
-                                <label for="email-input-form" class="label-input-form">Почта</label>
-                            </div>
-
-                            <div class="input-form-error" data-empty="Укажите номер телефона"></div>
-                        </div>
-
-                        <div class="input-form-container">
-                            <div class="input-form-upper-label"></div>
-
-                            <div class="input-form-block">
-                                <input type="text" class="input-form-receiver" id="phone-input-form" placeholder="&nbsp;">
-                                <label for="phone-input-form" class="label-input-form">Телефон</label>
-                            </div>
-
-                            <div class="input-form-error" data-empty="Укажите почту"></div>
-                        </div>
-
-                        <div class="input-form-container">
-                            <div class="input-form-upper-label"></div>
-
-                            <div class="input-form-block">
-                                    <input type="text" class="input-form-receiver" id="inn-input-form" placeholder="&nbsp;">
-                                    <label for="inn-input-form" class="label-input-form">ИНН</label>
-                            </div>
-
-                            <div class="input-form-error" data-empty="Укажите ИНН">Для таможенного оформления</div>
-                        </div>
+                    <div class="terms-of-use__text">
+                        <span class="terms-of-use__text-first-word">Соглашаюсь</span>
+                        <span class="terms-of-use__text-link">с правилами пользования торговой площадкой</span>
+                        <span class="terms-of-use__text-and">и</span>
+                        <span class="terms-of-use__text-link">возврата</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </aside>
     </div>
-    <aside class="result-block card">
-        <div class="info-card-header result-block__header">
-            <div class="info-card__title result-block__title">
-                <div class="result-block__title-text">Итого</div>
-
-                <div class="result-block__title-sum">
-                    <div class="title-sum__value">2 101 063</div>
-                    <div class="title-sum__currency">&nbsp;сом</div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="result-block__main">
-            <div class="result-block__cost-calculations result-block-section">
-                <div class="cost-calculations__total-amount-and-sum cost-calculations-section">
-
-                    <div class="total-amount-and-sum__amount cost-calculations__section-part">
-                        <div class="total-amount-and-sum__amount-number">203</div>
-
-                        <div class="total-amount-and-sum__amount-text">&nbsp;товара</div>
-                    </div>
-
-
-                    <div class="total-amount-and-sum__sum cost-calculations__section-part">
-                        <div class="total-amount-and-sum__sum-value">2 302 048</div>
-
-                        <div class="total-amount-and-sum__sum-currency">&nbsp;сом</div>
-                    </div>
-
-                </div>
-
-                <div class="cost-calculations__total-discount cost-calculations-section">
-
-                    <div class="total-discount__title cost-calculations__section-part">Скидка</div>
-
-                    <div class="total-discount__sum cost-calculations__section-part">
-                        <div class="total-discount__sum-value">−200 985</div>
-
-                        <div class="total-discount__sum-currency">&nbsp;сом</div>
-                    </div>
-
-                </div>
-
-                <div class="cost-calculations__total-delivery-cost cost-calculations-section">
-                    <div class="total-delivery-cost cost-calculations__section-part">
-                        Доставка
-                    </div>
-
-                    <div class="total-delivery-cost cost-calculations__section-part">
-                        Бесплатно
-                    </div>
-                </div>
-            </div>
-
-            <div class="result-block__delivery-info result-block-section">
-                <div class="delivery-info__header">
-                    <div class="delivery-info__title delivery-info-section">Доставка в пункт выдачи</div>
-
-                    <div class="delivery-info__change-button result-block__change-button">
-                        <img class="result-block__change-icon" src="icons/Pencil.svg">
-                    </div>
-                </div>
-
-                <div class="delivery-info__address delivery-info-section">
-                    Бишкек, улица Ахматбека Суюмбаева, 12/1
-                </div>
-
-                <span class="delivery-info__date delivery-info-section fake-link">5–8 фев</span>
-
-            </div>
-
-            <div class="delivery-info__return-delivery-block result-block-section">
-                <div class="delivery-card__return-delivery result-card__return-delivery">
-                    <img class="return-delivery__check-icon" src="icons/Return-delivery.svg">
-                    <div class="result-block__return-delivery-text-block return-delivery__text-block">
-                        <span class=" return-delivery__text">Обратная доставка товаров на склад при отказе —&nbsp;</span>
-                        <a class="return-delivery__link fake-link" href="">бесплатно</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="result-block__payment-info result-block-section">
-                <div class="payment-info__header delivery-info__header">
-                    <div class="delivery-info__title delivery-info-section">Оплата картой</div>
-
-                    <div class="delivery-info__change-button result-block__change-button">
-                        <img class="result-block__change-icon" src="icons/Pencil.svg">
-                    </div>
-                </div>
-
-                <div class="payment-info__main">
-                    <img class="payment-info__card-icon" src="icons/Paycard-mir.svg">
-                    <div class="payment-info__card-number">1234 12•• •••• 1234</div>
-                </div>
-
-
-            </div>
-
-            <div class="payment-info__pay-now-block result-block-section">
-                <div class="pay-now-block__check-to-pay-block">
-                    <label class="check-to-pay-block__check choose-item_checkbox-block" id="check-to-pay-now" for="check-to-pay__real-checkbox">
-                        <input class="real-checkbox hidden" id="check-to-pay__real-checkbox" type="checkbox">
-                        <div class="custom-checkbox" id="check-to-pay__custom-checkbox"></div>
-                    </label>
-
-                    <div class="check-to-pay-block__text">Списать оплату сразу</div>
-                </div>
-
-                <div class="pay-now-block__description">
-                    Спишем оплату с карты при получении
-                </div>
-            </div>
-
-            <div class="result-block__order-button-block">
-                <input type="button" class="order-button" value="Заказать">
-            </div>
-
-            <div class="result-block__accept_terms-of-use-block">
-                <img class="terms-of-use__check-icon" src="icons/Terms-of-use-check.svg">
-
-                <div class="terms-of-use__text">
-                    <span class="terms-of-use__text-first-word">Соглашаюсь</span>
-                    <span class="terms-of-use__text-link">с правилами пользования торговой площадкой</span>
-                    <span class="terms-of-use__text-and">и</span>
-                    <span class="terms-of-use__text-link">возврата</span>
-                </div>
-            </div>
-        </div>
-    </aside>
-</div>
 
     <footer class="footer">
         <div class="footer-text">© 2022  ООО «Товары и точка»</div>
     </footer>
 
+    <!--мобильный таббар-->
     <div class="mobile-tabbar">
         <div class="mobile-tabbar__home">
             <img class="mobile-icon mobile-tabbar_home-icon" src="icons/mobile/Home-mobile.svg">
@@ -611,8 +759,149 @@
         </div>
     </div>
 
+    <!--окно смены карты оплаты-->
+    <div class="modal-payment modal hidden">
+        <div class="modal-dialog-payment">
+            <div class="modal-content-payment">
+                <div class="modal-card-header-text">Способ оплаты</div>
+                <div data-close class="modal-close">&times;</div>
+
+                <div class="modal-cards">
+                    <div class="modal-card">
+                        <input type="radio" class="radio-checked hidden" id="payment-card-1" name="payment-card" checked />
+                        <label for="payment-card-1" class="choose-custom-radio"></label>
+
+                        <img class="modal-paycard-icon" src="./icons/Paycard-mir.svg" alt="mir" />
+
+                        <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                    </div>
+
+                    <div class="modal-card">
+                        <input type="radio" class="radio-checked hidden" id="payment-card-2" name="payment-card" />
+                        <label for="payment-card-2" class="choose-custom-radio"></label>
+
+                        <img class="modal-paycard-icon" src="./icons/Paycard-visa.svg" alt="visa" />
+
+                        <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                    </div>
+
+                    <div class="modal-card">
+                        <input type="radio" class="radio-checked hidden" id="payment-card-3" name="payment-card" />
+                        <label for="payment-card-3" class="choose-custom-radio"></label>
+
+                        <img class="modal-paycard-icon" src="./icons/Paycard-mastercard.svg" alt="mastercard" />
+
+                        <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                    </div>
+
+                    <div class="modal-card">
+                        <input type="radio" class="radio-checked hidden" id="payment-card-4" name="payment-card" />
+                        <label for="payment-card-4" class="choose-custom-radio"></label>
+
+                        <img class="modal-paycard-icon" src="./icons/Paycard-maestro.svg" alt="maestro" />
+
+                        <span class="modal-paycard-number">1234 56•• •••• 1234</span>
+                    </div>
+                </div>
+
+                <input type="button" value="Выбрать" class="custom-button modal-custom-button" id="choose-card" />
+            </div>
+        </div>
+    </div>
+
+    <!--окно смены пункта доставки-->
+    <div data-modal class="modal-delivery modal hidden">
+        <div class="modal-dialog-delivery">
+            <div class="modal-content-delivery">
+                <div class="modal-delivery-header">Способ доставки</div>
+                <div data-close class="modal-close">&times;</div>
+
+                <div class="modal-addresses">
+                    <div class="modal-buttons">
+                        <input type="button" value="В пункт выдачи" class="modal-button choose-delivery-issue" />
+                        <input type="button" value="Курьером" class="modal-button chosen-button choose-delivery-courier" />
+                    </div>
+
+                    <div class="modal-my-addresses">Мои адреса</div>
+
+                    <!-- modal address  -->
+                    <div class="modal-address">
+                        <input type="radio" class="radio-checked hidden" id="address-1" name="address" checked />
+                        <label for="address-1" class="choose-custom-radio"></label>
+
+                        <div class="modal-card-courier">Бишкек, улица Табышалиева, 57</div>
+                        <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                    </div>
+
+                    <div class="modal-address">
+                        <input type="radio" class="radio-checked hidden" id="address-2" name="address" />
+                        <label for="address-2" class="choose-custom-radio"></label>
+
+                        <div class="modal-card-courier">Бишкек, улица Жукеева-Пудовкина, 77/1</div>
+                        <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                    </div>
+
+                    <div class="modal-address">
+                        <input type="radio" class="radio-checked hidden" id="address-3" name="address" />
+                        <label for="address-3" class="choose-custom-radio"></label>
+
+                        <div class="modal-card-courier">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</div>
+                        <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                    </div>
+
+                    <!-- modal issue  -->
+                    <div class="modal-issue hidden">
+                        <input type="radio" class="radio-checked hidden" id="issue-1" name="issue" checked />
+                        <label for="issue-1" class="choose-custom-radio"></label>
+
+                        <div class="modal-text-issue">
+                            <span class="modal-text-address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                            <div class="delivery-stars">
+                                <span class="delivery-star">&#9733;</span>
+                                <span class="delivery-point">Пункт выдачи</span>
+                            </div>
+                        </div>
+
+                        <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                    </div>
+
+                    <div class="modal-issue hidden">
+                        <input type="radio" class="radio-checked hidden" id="issue-2" name="issue" />
+                        <label for="issue-2" class="choose-custom-radio"></label>
+
+                        <div class="modal-text-issue">
+                            <span class="modal-text-address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                            <div class="delivery-stars">
+                                <span class="delivery-star">&#9733;</span> <span class="delivery-rate">4,99</span>
+                                <span class="delivery-point">Пункт выдачи</span>
+                            </div>
+                        </div>
+
+                        <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                    </div>
+
+                    <div class="modal-issue hidden">
+                        <input type="radio" class="radio-checked hidden" id="issue-3" name="issue" />
+                        <label for="issue-3" class="choose-custom-radio"></label>
+
+                        <div class="modal-text-issue">
+                            <span class="modal-text-address">г. Бишкек, улица Табышалиева, д. 57</span>
+                            <div class="delivery-stars">
+                                <span class="delivery-star">&#9733;</span> <span class="delivery-rate"> 4,99</span>
+                                <span class="delivery-point">Пункт выдачи</span>
+                            </div>
+                        </div>
+                        <img src="./icons/Delete.svg" alt="delete" class="good-delete-image modal-delete-image" />
+                    </div>
+                </div>
+
+                <input type="button" value="Выбрать" class="custom-button modal-custom-button" id="choose-address" />
+            </div>
+        </div>
+    </div>
+
 </div>
 
-
+<script type="module" src="./js/script.js"></script>
 </body>
 </html>
