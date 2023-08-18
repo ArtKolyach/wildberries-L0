@@ -1671,6 +1671,8 @@ input[type="number"]:focus {
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box;
+        position: sticky;
+        bottom: 0;
     }
 
     .mobile-icon {
