@@ -383,10 +383,9 @@ export function cart() {
 
       }
 
-      notificationValue.textContent < notificationValue.dataset.max
+      +notificationValue.textContent < +notificationValue.dataset.max
           ? firstDateNotFull = true
           : firstDateNotFull = false;
-
     }
   }
 }
