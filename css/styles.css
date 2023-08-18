@@ -8,6 +8,29 @@ body {
     margin: 0;
 }
 
+.header__nav-element,
+.header__navbar-item,
+.counter__minus, .counter__plus,
+.amount-info__favourite-button,
+.amount-info__delete-button,
+.choose-all__fold-flag,
+.item-provider__info-icon,
+.price__original-price,
+.item-name, .item-photo,
+input[type=button],
+.address-button, .paycard-button,
+.choose-custom-radio, .modal-delete-image,
+.delivery-card__item
+{
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
 .header {
     background: #6725A8;
     height: 88px;
@@ -74,6 +97,7 @@ body {
     background-color: #8551B9;
     border: none;
     outline: none;
+    color: #FFFFFF;
 }
 
 .searchbar::placeholder {
@@ -167,6 +191,69 @@ body {
     display: flex;
 }
 
+.tooltip {
+    position: absolute;
+    padding: 11px 16px 13px 16px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    max-width: 288px;
+    min-width: 239px;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.item-provider__info-icon-wrapper:hover + .good-info-tooltip {
+    opacity: 100;
+}
+
+.good-info-tooltip {
+    top: 26px;
+}
+
+.good-tooltip-header {
+    font-weight: 700;
+}
+
+.good-tooltip-main {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.good-previous-tooltip {
+    margin: 49px -155px;
+}
+
+.good-tooltip-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.good-tooltip-discount {
+    display: inline-block;
+    color: #A0A0A4;
+}
+
+.price__original-price:hover + .good-previous-tooltip {
+    opacity: 100%;
+}
+
+.aside-price-tooltip {
+    margin-top: 5px;
+}
+
+.return-delivery__link:hover + .aside-price-tooltip {
+    opacity: 100%;
+}
+
 .custom-checkbox {
     height: 22px;
     width: 22px;
@@ -220,10 +307,8 @@ body {
     position: sticky;
     top: 10px;
     width: 100%;
-/*    max-width: 429px;
-    min-width: 303px;*/
     max-height: 604px;
-    min-height: 572px;
+    min-height: 549px;
     height: 100%;
     padding: 16px 24px 24px 24px;
     box-sizing: border-box;
@@ -243,13 +328,20 @@ body {
     margin-bottom: 40px;
 }
 
-.unavailable-goods__text {
+.unavailable-goods__text{
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0;
     text-align: left;
+}
 
+.hidden-choose-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .order-info-card:not(.order-info-card:last-of-type) {
@@ -340,6 +432,7 @@ body {
 .item-provider {
     display: flex;
     margin-top: 4px;
+    position: relative;
 }
 
 .item-provider__provider-name {
@@ -428,6 +521,18 @@ input[type="number"]:focus {
     margin-top: 8px;
 }
 
+.amount-info__delete-button, .amount-info__favourite-button {
+    filter: grayscale(100%) brightness(0);
+}
+
+.amount-info__delete-button:hover {
+    filter: initial;
+}
+
+.amount-info__favourite-button.favorite {
+    filter: initial;
+}
+
 .unavailable-item .amount-info__action-buttons {
     margin-top: 0;
 }
@@ -440,6 +545,7 @@ input[type="number"]:focus {
     width: 110px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .price__discounted-price, .price__original-price {
@@ -545,6 +651,14 @@ input[type="number"]:focus {
     display: flex;
 }
 
+.delivery-star {
+    color: #FF970D;
+}
+
+.delivery-star-text {
+    font-size: 16px;
+}
+
 .delivery-card__subtitle {
     width: 153px;
 }
@@ -631,6 +745,7 @@ input[type="number"]:focus {
     font-weight: 400;
     line-height: 16px;
     align-items: center;
+    position: relative;
 }
 
 .fake-link {
@@ -728,6 +843,21 @@ input[type="number"]:focus {
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
+    color: rgba(245, 81, 35, 1);
+}
+
+.fake-form-error {
+    height: 14px;
+    margin-top: 2px;
+    display: none;
+}
+
+.input-form-error.hidden + .fake-form-error {
+    display: block;
+}
+
+#inn-input-tip {
+    color: black;
 }
 
 .result-block-section {
@@ -843,7 +973,10 @@ input[type="number"]:focus {
 .pay-now-block__check-to-pay-block {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+}
+
+.pay-now-block__description {
+    margin-top: 8px;
 }
 
 .check-to-pay-block__check {
@@ -869,7 +1002,7 @@ input[type="number"]:focus {
     margin-bottom: 12px;
 }
 
-.order-button {
+.custom-button {
     width: 100%;
     color: #fff;
     height: 44px;
@@ -914,11 +1047,234 @@ input[type="number"]:focus {
     display: none;
 }
 
+/* modal */
 
+.choose-custom-radio {
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 16px;
+    background: white;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hidden:checked+.choose-custom-radio {
+    background: #CB11AB;
+    color: white;
+    border: none;
+}
+
+.hidden:checked+.choose-custom-radio::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: flex;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    background: radial-gradient(circle, #fff, #fff);
+    content: "";
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-dialog-payment {
+    width: 400px;
+    height: 408px;
+    margin: 40px auto;
+    border-radius: 16px;
+}
+
+.modal-content-payment {
+    position: relative;
+    width: 100%;
+    padding: 18px 22px 24px 22px;
+    background-color: #fff;
+    height: 408px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-card-header-text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal-dialog-delivery {
+    width: 500px;
+    margin: 40px auto;
+    border-radius: 16px;
+}
+
+.modal-content-delivery {
+    position: relative;
+    width: 100%;
+    padding: 18px 22px 24px 22px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 16px;
+    overflow-y: auto;
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-delivery-header {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal-close {
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    font-size: 36px;
+    color: #000;
+    font-weight: 400;
+    opacity: .5;
+    border: none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.modal-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+.modal-card {
+    display: flex;
+    margin-left: 1px;
+    align-items: flex-start;
+}
+
+.modal-paycard-icon {
+    margin-top: -1px;
+    margin-left: 9px;
+}
+
+.modal-paycard-number {
+    margin-top: 2.3px;
+    margin-left: 4px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 16px;
+}
+
+.modal-button {
+    width: 100%;
+    border-radius: 20px;
+    height: 36px;
+    border: 2px solid #CB11AB26;
+    font-weight: 700;
+    font-size: 13px;
+    color: #000;
+    background: #fff;
+}
+
+.modal-button.chosen-button {
+    border: 2px solid #CB11AB;
+}
+
+.modal-my-addresses {
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.modal-address {
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+.modal-address+.modal-address {
+    margin-top: -2px;
+}
+
+.modal-card-courier {
+    margin-left: 3px;
+    line-height: 24px;
+    margin-top: -2px;
+}
+
+.modal-address,
+.modal-issue {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.modal-address.hidden,
+.modal-issue.hidden {
+    display: none;
+}
+
+.modal-delete-image {
+    margin-left: auto;
+}
+
+.modal-custom-button {
+    width: 164px;
+    margin-top: auto;
+}
+
+.modal .choose-custom-radio {
+    margin-top: 5px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s
+}
+
+/*ТОЛЬКО ПК*/
 @media only screen and (min-width: 1024px) {
     .result-block {
         max-width: 429px;
         min-width: 303px;
+    }
+
+    .header__searchbar::after {
+        opacity: 50%;
+    }
+
+    .amount-info__action-buttons {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .available-item:hover .amount-info__action-buttons {
+        visibility: visible;
+        opacity: 100;
     }
 }
 
@@ -935,6 +1291,7 @@ input[type="number"]:focus {
     }
 }
 
+/*ТОЛЬКО МОБИЛКИ*/
 @media only screen and (max-width: 1023px) {
     .main {
         padding: 15px 0 40px 0;
@@ -1332,6 +1689,87 @@ input[type="number"]:focus {
 
     #check-to-pay-now {
         position: initial;
+    }
+
+    /* mobile modal */
+
+    .modal .modal-dialog-payment,
+    .modal .modal-dialog-delivery {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .modal .modal-content-payment,
+    .modal .modal-content-delivery {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .modal .modal-delivery-header,
+    .modal .modal-card-header-text {
+        letter-spacing: -0.5px;
+    }
+
+    .modal .modal-content-payment {
+        padding: 20px 16px 16px 15px;
+    }
+
+    .modal .modal-custom-button {
+        width: 100%;
+    }
+
+    .modal .modal-content-delivery {
+        padding: 20px 16px 16px 15px;
+    }
+
+    .modal .modal-button {
+        height: 40px;
+    }
+
+    .modal .modal-my-addresses {
+        margin-top: 26px;
+    }
+
+    .modal .modal-issue {
+        padding-top: 14px;
+        padding-bottom: 0;
+        gap: 9px;
+    }
+
+    .modal .modal-issue+.modal-issue {
+        padding-top: 24px;
+    }
+
+    .modal .modal-text-issue {
+        line-height: 14px;
+    }
+
+    .modal .delivery-star {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .modal .modal-delete-image {
+        margin-top: 4px;
+        margin-right: -3px;
+    }
+
+    .modal .modal-text-address {
+        line-height: 24px;
+    }
+
+    .modal-payment .modal-cards {
+        padding-top: 18px;
+    }
+
+    .modal .modal-close {
+        right: 10px;
+    }
+
+    .tooltip {
+        display: none;
     }
 }
 
