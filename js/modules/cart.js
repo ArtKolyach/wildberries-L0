@@ -49,7 +49,6 @@ export function cart() {
       });
     }
 
-    showInfoDelivery([...chooseCheckbox]);
   }
 
   chooseAll.addEventListener('change', checkboxChange);
@@ -60,7 +59,6 @@ export function cart() {
     checkbox.addEventListener('change', () => {
       const inputArray = [...chooseCheckbox];
 
-      showInfoDelivery(inputArray);
 
       chooseAll.checked = inputArray.every((item) => item.checked);
     });
